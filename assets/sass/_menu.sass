@@ -1,0 +1,162 @@
+.nav
+	display: flex
+	align-items: center
+	&-icon
+		width: 30px
+		height: 30px
+		display: none
+		justify-content: center
+		align-items: center
+		background: #fff
+		position: absolute
+		left: -45px
+		top: 5px
+		border-radius: 50%
+	&>li
+		margin-right: 10px
+		padding: 30px 0px
+		&.submenu-drop
+			&>a
+				font-weight: 700
+		&:hover
+			background: rgba(#0179D9, 0.7)
+			.menu-drop
+				height: auto
+				// min-height: 500px
+				transform: rotateX(0deg)
+
+			.small-drop
+				height: auto
+		&:last-child
+			margin-right: 0px
+		&>a
+			padding: 12px 8px
+			color: #fff
+			display: block
+			font-weight: 500
+			font-size: 15px
+			line-height: 100%
+			
+
+.menu
+	&-drop
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		min-height: 500px
+		display: flex
+		justify-content: center
+		background: #0179D9
+		z-index: -1
+		transform: rotateX(-90deg)
+		transform-origin: center top
+		overflow: hidden
+		transition: all 0.3s ease 0.3s
+		.container
+			position: relative
+			&>ul
+				&>li
+					margin-bottom: 5px
+					border-radius: 90px 0px 0px 90px
+					overflow: hidden
+					&:hover
+						background: #FF9534
+					&>a
+						display: block
+						padding: 11px 51px 14px 41px
+						border-radius: 90px 0px 0px 90px
+						color: #fff
+						font-weight: 500
+						font-size: 15px
+						line-height: 100%
+						&:hover
+							background: #FF9534
+		&__submenu
+			padding: 26px 87px 52px 58px
+			background: #DFF1FF
+			position: absolute
+			left: 303px
+			width: 2000px
+			height: 100%
+			top: 0
+			transition-delay: 0.5s
+			&-info
+				display: flex
+				flex-direction: column
+				max-width: 255px
+				width: 100%
+				transition-delay: 0.5s
+			h4
+				font-weight: 700
+				font-size: 20px
+				line-height: 130%
+				margin-bottom: 11px
+			p
+				font-weight: 400
+				font-size: 14px
+				line-height: 145%
+				margin-bottom: 28px
+			a
+				font-weight: 500
+				font-size: 15px
+				line-height: 100%
+				color: #2196F3
+			li
+				margin-bottom: 15px
+
+
+.small
+	&-drop
+		width: 300px
+		height: 0
+		overflow: hidden
+		background: #0179d9
+		position: absolute
+		top: 100%
+		ul
+			li
+				a
+					display: block
+					padding: 12px
+					color: #fff
+					font-size: 14px
+					width: 100%
+				&:hover
+					background: #ff9534
+
+.submenu
+	padding: 21px 0px 52px
+	position: relative
+	height: 100%
+	&-drop
+		&:hover
+			.small-drop
+				height: auto
+		&>a
+			position: relative
+			font-weight: bold
+			display: flex!important
+			flex-direction: row-reverse
+			&::before
+				transform: rotateZ(90deg)
+				content: '>'
+				margin-left: 4px
+				position: relative
+				width: 10px
+				color: #fff
+				font-weight: bold
+				font-size: 16px
+
+
+	li
+		.menu-drop__submenu
+			z-index: 1
+			.menu-drop__submenu-info
+				opacity: 0
+				transition: all 0.5s ease
+		&:hover
+			.menu-drop__submenu
+				z-index: 3
+				.menu-drop__submenu-info
+					opacity: 1

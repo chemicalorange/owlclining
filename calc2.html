@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="./assets/css/style.min.css" />
+	<link rel="stylesheet" href="./assets/css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="container">
+			<div class="area" style="margin-top: 100px">
+				<p class="area__title">Выберите услугу</p>
+				<div class="area__select">
+					<input type="text" />
+					<div class="area__select-input" data-price="220">
+						Генеральная уброка
+					</div>
+					<div class="options">
+						<div class="options__item" data-price="220">Генеральная уброка</div>
+						<div class="options__item" data-price="150">Уборка квартир</div>
+						<div class="options__item" data-price="1000">Уборка офисов</div>
+					</div>
+				</div>
+				<p class="area__title">Материал:</p>
+				<div class="area__select">
+					<input type="text" />
+					<div class="area__select-input" data-price="220">
+						Генеральная уброка
+					</div>
+					<div class="options">
+						<div class="options__item" data-price="220">Генеральная уброка</div>
+						<div class="options__item" data-price="150">Уборка квартир</div>
+						<div class="options__item" data-price="1000">Уборка офисов</div>
+					</div>
+				</div>
+				<p class="area__title">Размер</p>
+				<div class="area__inputs area__inputs-small">
+					<div class="area__square">
+						<input type="number" name="total_area" id="total_area" />
+						<sup>м<sup>2</sup></sup>
+					</div>
+					<div class="area__square-btn">
+						<button id="del_one"></button>
+						<button id="add_one"></button>
+					</div>
+				</div>
+				<div class="area__score">
+					<p>Итого</p>
+					<div class="area__score-sum"><span>2500</span> ₽</div>
+				</div>
+				<button class="btn btn-blue">Заказать уборку</button>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./assets/js/swiper-bundle.min.js"></script>
+<script src="./assets/js/index-calc2.js"></script>
+<script src="./assets/js/jquery-3.6.0.slim.min.js"></script>
+<script src="./assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+	const swiper = new Swiper(".area__slider", {
+		loop: true,
+		navigation: {
+			nextEl: ".areaSwiper-button-next",
+			prevEl: ".areaSwiper-button-prev",
+		},
+		effect: "fade",
+	});
+</script>
+<script>
+	(function ($) {
+		$(window).on("load", function () {
+			$(".content").mCustomScrollbar({
+				axis: "y",
+				scrollbarPosition: "string", // horizontal scrollbar
+			});
+		});
+	})(jQuery);
+</script>
+
+</html>

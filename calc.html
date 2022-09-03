@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/jquery.mCustomScrollbar.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="area" style="margin-top: 100px">
+        <p class="area__title">Площадь помещения</p>
+        <div class="area__inputs">
+          <div class="area__square">
+            <input type="number" name="total_area" id="total_area" />
+            <sup>м<sup>2</sup></sup>
+          </div>
+          <div class="area__square-btn">
+            <button id="del_one"></button>
+            <button id="add_one"></button>
+          </div>
+        </div>
+        <div class="area__radio-list">
+          <label>
+            <input type="radio" name="default" value="30" />
+            <span>30</span>
+          </label>
+
+          <label>
+            <input type="radio" name="default" value="40" />
+            <span>40</span>
+          </label>
+
+          <label>
+            <input type="radio" name="default" value="50" />
+            <span>50</span>
+          </label>
+          <label>
+            <input type="radio" name="default" value="60" />
+            <span>60</span>
+          </label>
+          <label>
+            <input type="radio" name="default" value="70" />
+            <span>70</span>
+          </label>
+          <label>
+            <input type="radio" name="default" value="80" />
+            <span>80</span>
+          </label>
+          <label>
+            <input type="radio" name="default" value="90" />
+            <span>90</span>
+          </label>
+        </div>
+        <p class="area__title">Выберите услугу</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">
+            Генеральная уброка
+          </div>
+          <div class="options">
+            <div class="options__item" data-price="220">Генеральная уброка</div>
+            <div class="options__item" data-price="150">Уборка квартир</div>
+            <div class="options__item" data-price="1000">Уборка офисов</div>
+          </div>
+        </div>
+        <p class="area__title">Выберити доп.услугу</p>
+        <div class="area__service">
+          <div class="area__service-border">
+            <div
+              class="area__service-wrapper mCustomScrollbar"
+              data-mcs-theme="dark"
+            >
+              <div class="area__service-item">
+                <span>name1</span>
+                <div class="area__service-wrap">
+                  <button class="area__service-del"></button>
+                  <div class="area__service-value" data-price="150">0</div>
+                  <button class="area__service-add"></button>
+                </div>
+              </div>
+              <div class="area__service-item">
+                <span>name1</span>
+                <div class="area__service-wrap">
+                  <button class="area__service-del"></button>
+                  <div class="area__service-value" data-price="150">0</div>
+                  <button class="area__service-add"></button>
+                </div>
+              </div>
+              <div class="area__service-item">
+                <span>name1</span>
+                <div class="area__service-wrap">
+                  <button class="area__service-del"></button>
+                  <div class="area__service-value" data-price="150">0</div>
+                  <button class="area__service-add"></button>
+                </div>
+              </div>
+              <div class="area__service-item">
+                <span>name1</span>
+                <div class="area__service-wrap">
+                  <button class="area__service-del"></button>
+                  <div class="area__service-value" data-price="150">0</div>
+                  <button class="area__service-add"></button>
+                </div>
+              </div>
+              <div class="area__service-item">
+                <span>name1</span>
+                <div class="area__service-wrap">
+                  <button class="area__service-del"></button>
+                  <div class="area__service-value" data-price="150">0</div>
+                  <button class="area__service-add"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="area__score">
+          <p>Итого</p>
+          <div class="area__score-sum"><span>2500</span> ₽</div>
+        </div>
+        <button class="btn btn-blue">Заказать уборку</button>
+      </div>
+      <hr />
+      <div class="area" style="margin-top: 100px">
+        <p class="area__title">Выберите услугу</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">
+            Генеральная уброка
+          </div>
+          <div class="options">
+            <div class="options__item" data-price="220">Генеральная уброка</div>
+            <div class="options__item" data-price="150">Уборка квартир</div>
+            <div class="options__item" data-price="1000">Уборка офисов</div>
+          </div>
+        </div>
+        <p class="area__title">Материал:</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">
+            Генеральная уброка
+          </div>
+          <div class="options">
+            <div class="options__item" data-price="220">Генеральная уброка</div>
+            <div class="options__item" data-price="150">Уборка квартир</div>
+            <div class="options__item" data-price="1000">Уборка офисов</div>
+          </div>
+        </div>
+        <p class="area__title">Размер</p>
+        <div class="area__inputs area__inputs-small">
+          <div class="area__square">
+            <input type="number" name="total_area" id="total_area" />
+            <sup>м<sup>2</sup></sup>
+          </div>
+          <div class="area__square-btn">
+            <button id="del_one"></button>
+            <button id="add_one"></button>
+          </div>
+        </div>
+        <div class="area__score">
+          <p>Итого</p>
+          <div class="area__score-sum"><span>2500</span> ₽</div>
+        </div>
+        <button class="btn btn-blue">Заказать уборку</button>
+      </div>
+      <hr />
+      <div class="area" style="margin-top: 100px">
+        <p class="area__title">Выберите услугу</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">Химчитска штор</div>
+          <div class="options">
+            <div class="options__item" data-price="220">Химчитска штор</div>
+            <div class="options__item" data-price="150">Химчитска штор</div>
+            <div class="options__item" data-price="1000">Химчитска штор</div>
+          </div>
+        </div>
+        <p class="area__title">Вид штор:</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">Тюль</div>
+          <div class="options">
+            <div class="options__item" data-price="220">Тюль</div>
+            <div class="options__item" data-price="150">Тюль</div>
+            <div class="options__item" data-price="1000">Тюль</div>
+          </div>
+        </div>
+        <p class="area__title">Размер</p>
+        <div class="area__inputs-params">
+          <div class="area__inputs">
+            <div class="area__square">
+              <span>Ширина</span>
+              <input type="number" name="total_area" id="total_area" />
+              <sup>м<sup>2</sup></sup>
+            </div>
+            <div class="area__square-btn">
+              <button id="del_one"></button>
+              <button id="add_one"></button>
+            </div>
+          </div>
+          <div class="area__inputs">
+            <div class="area__square">
+              <span>Длина</span>
+              <input type="number" name="total_area" id="total_area" />
+              <sup>м<sup>2</sup></sup>
+            </div>
+            <div class="area__square-btn">
+              <button id="del_one"></button>
+              <button id="add_one"></button>
+            </div>
+          </div>
+        </div>
+        <div class="area__score">
+          <p>Итого</p>
+          <div class="area__score-sum"><span>2500</span> ₽</div>
+        </div>
+        <button class="btn btn-blue">Заказать уборку</button>
+      </div>
+      <hr />
+      <div class="area" style="margin-top: 100px">
+        <p class="area__title">Выберите услугу</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">
+            Химчитска автомобиля
+          </div>
+          <div class="options">
+            <div class="options__item" data-price="220">
+              Химчитска автомобиля
+            </div>
+            <div class="options__item" data-price="150">
+              Химчитска автомобиля
+            </div>
+            <div class="options__item" data-price="1000">
+              Химчитска автомобиля
+            </div>
+          </div>
+        </div>
+        <p class="area__title">Вид ТС:</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">Седан</div>
+          <div class="options">
+            <div class="options__item" data-price="220">Седан</div>
+            <div class="options__item" data-price="150">Седан</div>
+            <div class="options__item" data-price="1000">Седан</div>
+          </div>
+        </div>
+        <p class="area__title">Класс ТС:</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">Средний (B,C)</div>
+          <div class="options">
+            <div class="options__item" data-price="220">Средний (B,C)</div>
+            <div class="options__item" data-price="150">Средний (B,C)</div>
+            <div class="options__item" data-price="1000">Средний (B,C)</div>
+          </div>
+        </div>
+        <p class="area__title">Вид работ:</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">
+            Комплекс (весь салон)
+          </div>
+          <div class="options">
+            <div class="options__item" data-price="220">
+              Комплекс (весь салон)
+            </div>
+            <div class="options__item" data-price="150">
+              Комплекс (весь салон)
+            </div>
+            <div class="options__item" data-price="1000">
+              Комплекс (весь салон)
+            </div>
+          </div>
+        </div>
+        <div class="area__score">
+          <p>Итого</p>
+          <div class="area__score-sum"><span>2500</span> ₽</div>
+        </div>
+        <button class="btn btn-blue">Заказать уборку</button>
+      </div>
+      <hr />
+      <div class="area" style="margin-top: 100px">
+        <p class="area__title">Выберите услугу</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">
+            Химчитска дивана
+          </div>
+          <div class="options">
+            <div class="options__item" data-price="220">Химчитска дивана</div>
+            <div class="options__item" data-price="150">Химчитска дивана</div>
+            <div class="options__item" data-price="1000">Химчитска дивана</div>
+          </div>
+        </div>
+        <p class="area__title">Форма дивана:</p>
+        <div class="area__slider">
+          <div class="areaSwiper-button-prev"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/assets/img/furniture/couch.svg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/img/furniture/couch-2.svg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/img/furniture/couch-3.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="areaSwiper-button-next"></div>
+        </div>
+        <p class="area__title">Материал:</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">Текстиль</div>
+          <div class="options">
+            <div class="options__item" data-price="220">Текстиль</div>
+            <div class="options__item" data-price="150">Текстиль</div>
+            <div class="options__item" data-price="1000">Текстиль</div>
+          </div>
+        </div>
+        <div class="area__score">
+          <p>Итого</p>
+          <div class="area__score-sum"><span>2500</span> ₽</div>
+        </div>
+        <button class="btn btn-blue">Заказать уборку</button>
+      </div>
+      <hr />
+    </div>
+  </body>
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/jquery-3.6.0.slim.min.js"></script>
+  <script src="./assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script>
+    const swiper = new Swiper(".area__slider", {
+      loop: true,
+      navigation: {
+        nextEl: ".areaSwiper-button-next",
+        prevEl: ".areaSwiper-button-prev",
+      },
+      effect: "fade",
+    });
+  </script>
+  <script>
+    (function ($) {
+      $(window).on("load", function () {
+        $(".content").mCustomScrollbar({
+          axis: "y",
+          scrollbarPosition: "string", // horizontal scrollbar
+        });
+      });
+    })(jQuery);
+  </script>
+</html>

@@ -1,0 +1,92 @@
+.header
+	display: flex
+	// display: none
+	justify-content: center
+	flex-direction: column
+	align-items: center
+	z-index: 10
+	position: sticky
+	top: 0
+	left: 0
+	background: #fff
+	&-top
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 28px 0px 22px
+		z-index: 10
+		.container
+			justify-content: space-between
+			align-items: center
+	&-bottom
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		background: #2196F3
+		position: relative
+		z-index: 10
+		.header
+			&-links
+				display: none
+		.container
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.btn
+				max-width: 240px
+				height: 44px
+				font-weight: 600
+				font-size: 16px
+				line-height: 100%
+	&-links
+		margin-right: auto
+		display: flex
+		align-items: center
+		img
+			height: 33px
+			width: auto
+		a
+			margin-right: 13px
+			&:last-child
+				margin-right: 0px
+	&-logo
+		margin-right: 38px
+		max-width: 168px
+		width: 100%
+		img
+			width: 100%
+	&-contacts
+		display: flex
+		&__info
+			display: flex
+			align-items: center
+			margin-right: 24px
+			&:last-child
+				margin-right: 0px
+		&__img
+			width: 40px
+			height: 40px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			overflow: hidden
+			background: #FF9534
+			margin-right: 10px
+		&__text
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			a
+				font-weight: 700
+				font-size: 18px
+				line-height: 100%
+				margin-bottom: 7px
+			span
+				font-weight: 600
+				font-size: 12px
+				line-height: 100%
+				color: #2196F3

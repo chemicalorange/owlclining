@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="./assets/css/style.min.css" />
+	<link rel="stylesheet" href="./assets/css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="area" style="margin-top: 100px">
+
+			.area__cards>.cardWind*4>(.cardWind-img>img)+p+.cardWind-num>.
+
+			<div class="area__small-box">
+				<p class="area__title">Выберите услугу</p>
+				<div class="area__checked">
+					<label for=""><span></span><input type="checkbox" name="" id="">Москитные сетки</label>
+					<label for=""><span></span><input type="checkbox" name="" id="">Жалюзи</label>
+					<label for=""><span></span><input type="checkbox" name="" id="">Окно+балконная дверь</label>
+				</div>
+
+				<div class="area__score">
+					<p>Итого</p>
+					<div class="area__score-sum"><span>2500</span> ₽</div>
+				</div>
+			</div>
+			<button class="btn btn-blue">Заказать уборку</button>
+		</div>
+	</div>
+</body>
+<script src="./assets/js/swiper-bundle.min.js"></script>
+<script src="./assets/js/index-calc5.js"></script>
+<script src="./assets/js/jquery-3.6.0.slim.min.js"></script>
+<script src="./assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+	const swiper = new Swiper(".area__slider", {
+		loop: true,
+		navigation: {
+			nextEl: ".areaSwiper-button-next",
+			prevEl: ".areaSwiper-button-prev",
+		},
+		effect: "fade",
+	});
+</script>
+<script>
+	(function ($) {
+		$(window).on("load", function () {
+			$(".content").mCustomScrollbar({
+				axis: "y",
+				scrollbarPosition: "string", // horizontal scrollbar
+			});
+		});
+	})(jQuery);
+</script>
+
+</html>
