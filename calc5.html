@@ -13,6 +13,7 @@
 
 <body>
 	<div class="wrap">
+		(Количество каждого выбраного окна * на его датаатрибут) и + выбранные опции
 		<div class="area" style="margin-top: 100px">
 
 			<div class="area__cards">
@@ -21,7 +22,7 @@
 					<p></p>
 					<div class="cardWind-num">
 						<div id="del_one"></div>
-						<input type="number" min="0" max="99" value="0">
+						<input type="number" data-number="100" min="0" max="99" value="0">
 						<div id="add_one"></div>
 					</div>
 				</div>
@@ -30,7 +31,7 @@
 					<p></p>
 					<div class="cardWind-num">
 						<div id="del_one"></div>
-						<input type="number" min="0" max="99" value="0">
+						<input type="number" data-number="200" min="0" max="99" value="0">
 						<div id="add_one"></div>
 					</div>
 				</div>
@@ -39,7 +40,7 @@
 					<p></p>
 					<div class="cardWind-num">
 						<div id="del_one"></div>
-						<input type="number" min="0" max="99" value="0">
+						<input type="number" data-number="300" min="0" max="99" value="0">
 						<div id="add_one"></div>
 					</div>
 				</div>
@@ -48,7 +49,7 @@
 					<p></p>
 					<div class="cardWind-num">
 						<div id="del_one"></div>
-						<input type="number" min="0" max="99" value="0">
+						<input type="number" data-number="400" min="0" max="99" value="0">
 						<div id="add_one"></div>
 					</div>
 				</div>
@@ -57,9 +58,9 @@
 			<div class="area__small-box">
 				<p class="area__title">Выберите услугу</p>
 				<div class="area__checked">
-					<label for=""><span></span><input type="checkbox" name="" id="">Москитные сетки</label>
-					<label for=""><span></span><input type="checkbox" name="" id="">Жалюзи</label>
-					<label for=""><span></span><input type="checkbox" name="" id="">Окно+балконная дверь</label>
+					<label for=""><span></span><input type="checkbox" name="" id="" data-add="150">Москитные сетки</label>
+					<label for=""><span></span><input type="checkbox" name="" id="" data-add="200">Жалюзи</label>
+					<label for=""><span></span><input type="checkbox" name="" id="" data-add="300">Окно+балконная дверь</label>
 				</div>
 
 				<div class="area__score">
