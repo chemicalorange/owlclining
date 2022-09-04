@@ -3,6 +3,8 @@
 	width: 100%
 	display: flex
 	flex-direction: column
+	&__cards
+		display: flex
 	.btn
 		&-blue
 			max-width: none
@@ -283,6 +285,33 @@
 	&_one
 		background: url(../img/icons/minus.svg) no-repeat center
 		background-size: cover
+
+.cardWind
+	max-width: 200px
+	&-img
+		height: 275px
+	&-num
+		display: flex
+		align-items: center
+		input
+			width: 60px
+			border-radius: 8px	
+			padding: 10px
+			text-align: center
+			background: #FFFFFF
+			border: 1px solid #D7D7D7
+		input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+			display: none
+			-moz-appearance: textfield
+			-webkit-appearance: none
+			margin: 0
+		#add_one,#del_one
+			width: 25px
+			height: 25px
+		#add_one
+			background: url(../img/icons/right.svg) no-repeat center
+		#del_one
+			background: url(../img/icons/left.svg) no-repeat center
 
 .popup
 	&-btn

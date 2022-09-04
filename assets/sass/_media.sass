@@ -14,6 +14,12 @@
 		&.callback, &.calc
 			overflow: unset
 		
+	.menu
+		&-drop
+			&__submenu
+				&-info
+					margin-right: 110px
+	
 	.service
 
 		&-card
@@ -45,6 +51,10 @@
 		&-form
 			img
 				right: 50px
+			&__orange
+				.descr_form
+					max-width: none
+					margin-right: 0px
 
 	.aboutUs
 		padding-top: 100px
@@ -78,6 +88,11 @@
 	.price
 		&-card
 			max-width: 300px
+			&__small
+				&:nth-child(4n)
+					margin-right: 30px
+				&:nth-child(3n)
+					margin-right: 0px
 			&:nth-child(4n)
 				margin-right: 30px
 			&:nth-child(3n)
@@ -123,6 +138,13 @@
 		span
 			font-size: 12px
 
+	.menu
+		&-drop
+			&__submenu
+				&-info
+					margin-right: 0
+				&-icon
+					display: none
 
 	.container
 		max-width: 720px
@@ -196,9 +218,18 @@
 	.price
 		&-cards
 			justify-content: space-between
+			&__small
+				justify-content: flex-start
 		&-card
 			margin-right: 0px
 			max-width: 350px
+			&__small
+				&:nth-child(3n)
+					margin-right: 30px
+				&:nth-child(2n)
+					margin-right: 0px
+					
+					
 			&:nth-child(2n)
 				margin-right: 0px
 			&:nth-child(4n)
@@ -386,6 +417,7 @@
 				left: auto
 				width: 100%	
 				padding: 0px
+				flex-direction: column
 				a
 					font-size: 12px
 				p
@@ -396,8 +428,15 @@
 					height: 0px
 					overflow: hidden
 					flex-direction: column-reverse
+				&-icon
+					display: flex
+					height: 0px
+					width: 0px
+					transition: all 0s ease!important
+					opacity: 1!important
 				h4
 					display: none
+
 
 	.small
 		&-drop
@@ -416,6 +455,7 @@
 
 
 	.header
+		top: 0
 		&-active
 			height: 100vh
 			display: block
@@ -567,8 +607,22 @@
 				font-size: 24px
 
 		&-active
-			.menu-drop__submenu-info
-				height: auto
+			.menu
+				&-drop
+					&__submenu
+						&-info
+							height: auto
+							margin-bottom: 10px
+						&-icon
+							width: 160px
+							height: 60px
+							border-radius: 5px
+							align-items: flex-start
+							padding: 5px
+							transition: all 0s ease!important
+							img
+								width: auto
+								height: 100%
 
 	.container
 		max-width: 540px
@@ -828,6 +882,9 @@
 		&-card
 			width: 100%
 			max-width: none
+			&__small
+				max-width: none
+				margin-right: 0px!important
 			&__img
 				height: 180px
 				min-height: 180px

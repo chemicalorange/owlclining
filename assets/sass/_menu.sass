@@ -80,13 +80,29 @@
 			width: 2000px
 			height: 100%
 			top: 0
-			transition-delay: 0.5s
+			transition-delay: 0.2s
+			display: flex
 			&-info
 				display: flex
 				flex-direction: column
 				max-width: 255px
 				width: 100%
-				transition-delay: 0.5s
+				transition-delay: 0.2s
+				margin-right: 250px
+			&-icon
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 230px
+				height: 230px
+				border-radius: 50%
+				overflow: hidden
+				background: #fff
+				margin-top: auto
+				margin-bottom: auto
+				img
+					width: 120px
+					height: auto
 			h4
 				font-weight: 700
 				font-size: 20px
@@ -155,8 +171,13 @@
 			.menu-drop__submenu-info
 				opacity: 0
 				transition: all 0.5s ease
+			.menu-drop__submenu-icon
+				opacity: 0
+				transition: all 0.5s ease
 		&:hover
 			.menu-drop__submenu
 				z-index: 3
 				.menu-drop__submenu-info
+					opacity: 1
+				.menu-drop__submenu-icon
 					opacity: 1

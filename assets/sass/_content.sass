@@ -567,6 +567,7 @@ section
 
 	&-box
 		border-top: 1px solid rgba(#193347, 0.5)
+		width: 100%
 	&-list
 		border-bottom: 1px solid rgba(#193347, 0.5)
 	&-answer
@@ -759,7 +760,13 @@ section
 				line-height: 100%
 				color: #000217
 				margin-right: 10px
-			
+
+
+.qwe
+	display: none!important
+.current-cat
+	background: #2196F3!important
+	color: #fff!important
 
 .price
 	margin-top: 60px
@@ -795,6 +802,8 @@ section
 		display: flex
 		align-items: inherit
 		flex-wrap: wrap
+		&__small
+			align-items: flex-start
 	&-card
 		width: 350px
 		display: flex
@@ -804,6 +813,23 @@ section
 		margin-bottom: 30px
 		background: #DFF1FF
 		border-radius: 4px
+		&__small
+			max-width: 255px
+			width: 100%
+			min-height: 132px
+			padding: 20px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			margin-right: 30px
+			margin-bottom: 30px
+			background: #DFF1FF
+			border-radius: 4px
+			&:nth-child(4n)
+				margin-right: 0px
+				
+			span
+				margin-bottom: 0px!important
 		h4
 			margin-bottom: 14px
 		span
@@ -1221,6 +1247,7 @@ section
 		font-weight: 700
 		font-size: 30px
 		line-height: 110%
+		text-align: center
 	form
 		display: flex
 		flex-direction: column
@@ -1229,7 +1256,7 @@ section
 		width: 100%
 	input
 		padding: 17px 15px
-		margin-bottom: 20px
+		// margin-bottom: 20px
 		width: 100%
 		border: none
 		border-radius: 10px
@@ -1249,6 +1276,7 @@ section
 	.btn-black
 		max-width: none
 		margin-bottom: 30px
+		margin-top: 20px
 	.close
 		width: 50px
 		height: 50px
@@ -1265,6 +1293,7 @@ section
 
 .no-scroll
 	overflow: hidden
+
 
 
 

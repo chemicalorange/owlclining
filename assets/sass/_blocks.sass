@@ -3,11 +3,50 @@
 .hidden
 	display: none!important
 
-.qwe
+.wpcf7-form-control-wrap
+	display: block
+	margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0px
+	input
+		margin-bottom: 0px!important
+	textarea
+		margin-bottom: 0px!important
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output
+	font-size: 12px
+form
+	br
+		display: none!important
+
+.wpcf7-not-valid-tip
+	position: absolute
+	bottom: -12px
+	font-size: 12px
+.wpcf7-spinner
 	display: none
 
-		
-		
+.callback-form__orange
+	.descr_form
+		max-width: 200px
+		position: relative
+		margin-bottom: 0px
+		margin-right: 20px
+	
+.descr_form
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	margin-bottom: 30px
+	width: 100%
+	.btn-black
+		margin-bottom: 10px
+	span
+		width: 100%
+		font-size: 12px	
+		sup
+			font-size: 12px
+
 
 .steps
 	display: flex
@@ -22,7 +61,7 @@
 			min-width: 1110px
 			padding-right: 100px
 			box-sizing: content-box
-			padding: 100px 0px
+			padding: 50px 0px 0px 0px
 		&__rectBig
 			max-width: 920px
 			padding-right: 100px
@@ -50,7 +89,6 @@
 			box-sizing: content-box
 			min-width: 1060px
 			max-width: 1060px
-			justify-content: space-between
 			flex-wrap: nowrap
 			margin: 0 auto
 		&__circleBig
@@ -202,14 +240,30 @@
 		max-width: 222px
 		width: 100%
 		padding: 70px 38px 70px 46px
+		position: relative
+		&::before
+			position: absolute
+			content: ''
+			right: -10px
+			top: 50%
+			transform: translateY(-50%)
+			display: block
+			width: 10px
+			height: 20px
+			clip-path: polygon(0 1%, 0% 100%, 100% 50%)
+			z-index: 1
 		&:nth-child(odd)
 			background: #2196F3
+			&::before
+				background: #2196F3
 			h4
 				color: #FEFFFF
 			p
 				color: #fff
 		&:nth-child(even)
 			background: #DFF1FF
+			&::before
+				background: #DFF1FF
 			h4
 				color: #2196F3
 			p
@@ -220,6 +274,8 @@
 		&:last-child
 			border-top-right-radius: 15px
 			border-bottom-right-radius: 15px
+			&::before
+				display: none
 		h4
 			font-weight: 700
 			font-size: 20px
@@ -439,10 +495,13 @@
 	&-arrow
 		max-width: 233px
 		width: 100%
+		margin-right: 45px
 		display: flex
 		flex-direction: column
 		align-items: center
 		justify-content: center
+		&:last-child
+			margin-right: 0px
 		h4
 			font-weight: 700
 			font-size: 20px
