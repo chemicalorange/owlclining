@@ -13,13 +13,12 @@
 
 <body>
 	<div class="wrap">
-		(Количество каждого выбраного окна * на его датаатрибут) и + выбранные опции
-		<div class="area" style="margin-top: 100px">
+		<div class="area area__calc-six" style="margin-top: 100px">
 
 			<div class="area__cards">
 				<div class="cardWind">
-					<div class="cardWind-img"><img src="" alt=""></div>
-					<p></p>
+					<div class="cardWind-img"><img src="/assets/img/calc/wind-1.svg" alt=""></div>
+					<p>Одностворчатое</p>
 					<div class="cardWind-num">
 						<div id="del_one"></div>
 						<input type="number" data-number="100" min="0" max="99" value="0">
@@ -27,8 +26,8 @@
 					</div>
 				</div>
 				<div class="cardWind">
-					<div class="cardWind-img"><img src="" alt=""></div>
-					<p></p>
+					<div class="cardWind-img"><img src="/assets/img/calc/wind-2.svg" alt=""></div>
+					<p>Двухстворчатое</p>
 					<div class="cardWind-num">
 						<div id="del_one"></div>
 						<input type="number" data-number="200" min="0" max="99" value="0">
@@ -36,8 +35,8 @@
 					</div>
 				</div>
 				<div class="cardWind">
-					<div class="cardWind-img"><img src="" alt=""></div>
-					<p></p>
+					<div class="cardWind-img"><img src="/assets/img/calc/wind-3.svg" alt=""></div>
+					<p>Трехстворчатое</p>
 					<div class="cardWind-num">
 						<div id="del_one"></div>
 						<input type="number" data-number="300" min="0" max="99" value="0">
@@ -45,8 +44,8 @@
 					</div>
 				</div>
 				<div class="cardWind">
-					<div class="cardWind-img"><img src="" alt=""></div>
-					<p></p>
+					<div class="cardWind-img"><img src="/assets/img/calc/wind-4.svg" alt=""></div>
+					<p> Балкон или лоджия</p>
 					<div class="cardWind-num">
 						<div id="del_one"></div>
 						<input type="number" data-number="400" min="0" max="99" value="0">
@@ -58,17 +57,29 @@
 			<div class="area__small-box">
 				<p class="area__title">Выберите услугу</p>
 				<div class="area__checked">
-					<label for=""><span></span><input type="checkbox" name="" id="" data-add="150">Москитные сетки</label>
-					<label for=""><span></span><input type="checkbox" name="" id="" data-add="200">Жалюзи</label>
-					<label for=""><span></span><input type="checkbox" name="" id="" data-add="300">Окно+балконная дверь</label>
+					<div class="checkbox">
+						<input class="custom-checkbox" type="checkbox" id="1" name="1" data-add="150">
+						<label for="1">Москитные сетки</label>
+				</div>
+
+				<div class="checkbox">
+					<input class="custom-checkbox" type="checkbox" id="2" name="2" data-add="150">
+					<label for="2">Жалюзи</label>
+			</div>
+			
+			<div class="checkbox">
+				<input class="custom-checkbox" type="checkbox" id="3" name="3" data-add="150">
+				<label for="3">Окно+балконная дверь</label>
+		</div>
+					
 				</div>
 
 				<div class="area__score">
 					<p>Итого</p>
 					<div class="area__score-sum"><span>2500</span> ₽</div>
 				</div>
+				<button class="btn btn-blue">Заказать уборку</button>
 			</div>
-			<button class="btn btn-blue">Заказать уборку</button>
 		</div>
 	</div>
 </body>
