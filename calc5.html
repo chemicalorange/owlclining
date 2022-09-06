@@ -20,36 +20,36 @@
 					<div class="cardWind-img"><img src="/assets/img/calc/wind-1.svg" alt=""></div>
 					<p>Одностворчатое</p>
 					<div class="cardWind-num">
-						<div id="del_one"></div>
+						<div id="del_one" class="ar_left"></div>
 						<input type="number" data-number="100" min="0" max="99" value="0">
-						<div id="add_one"></div>
+						<div id="add_one" class="ar_right"></div>
 					</div>
 				</div>
 				<div class="cardWind">
 					<div class="cardWind-img"><img src="/assets/img/calc/wind-2.svg" alt=""></div>
 					<p>Двухстворчатое</p>
 					<div class="cardWind-num">
-						<div id="del_one"></div>
+						<div id="del_one" class="ar_left"></div>
 						<input type="number" data-number="200" min="0" max="99" value="0">
-						<div id="add_one"></div>
+						<div id="add_one" class="ar_right"></div>
 					</div>
 				</div>
 				<div class="cardWind">
 					<div class="cardWind-img"><img src="/assets/img/calc/wind-3.svg" alt=""></div>
 					<p>Трехстворчатое</p>
 					<div class="cardWind-num">
-						<div id="del_one"></div>
+						<div id="del_one" class="ar_left"></div>
 						<input type="number" data-number="300" min="0" max="99" value="0">
-						<div id="add_one"></div>
+						<div id="add_one" class="ar_right"></div>
 					</div>
 				</div>
 				<div class="cardWind">
 					<div class="cardWind-img"><img src="/assets/img/calc/wind-4.svg" alt=""></div>
 					<p> Балкон или лоджия</p>
 					<div class="cardWind-num">
-						<div id="del_one"></div>
+						<div id="del_one" class="ar_left"></div>
 						<input type="number" data-number="400" min="0" max="99" value="0">
-						<div id="add_one"></div>
+						<div id="add_one" class="ar_right"></div>
 					</div>
 				</div>
 			</div>
@@ -60,18 +60,18 @@
 					<div class="checkbox">
 						<input class="custom-checkbox" type="checkbox" id="1" name="1" data-add="150">
 						<label for="1">Москитные сетки</label>
-				</div>
+					</div>
 
-				<div class="checkbox">
-					<input class="custom-checkbox" type="checkbox" id="2" name="2" data-add="150">
-					<label for="2">Жалюзи</label>
-			</div>
-			
-			<div class="checkbox">
-				<input class="custom-checkbox" type="checkbox" id="3" name="3" data-add="150">
-				<label for="3">Окно+балконная дверь</label>
-		</div>
-					
+					<div class="checkbox">
+						<input class="custom-checkbox" type="checkbox" id="2" name="2" data-add="150">
+						<label for="2">Жалюзи</label>
+					</div>
+
+					<div class="checkbox">
+						<input class="custom-checkbox" type="checkbox" id="3" name="3" data-add="150">
+						<label for="3">Окно+балконная дверь</label>
+					</div>
+
 				</div>
 
 				<div class="area__score">
@@ -83,29 +83,37 @@
 		</div>
 	</div>
 </body>
-<script src="./assets/js/swiper-bundle.min.js"></script>
-<script src="./assets/js/index-calc5.js"></script>
-<script src="./assets/js/jquery-3.6.0.slim.min.js"></script>
-<script src="./assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
 <script>
-	const swiper = new Swiper(".area__slider", {
-		loop: true,
-		navigation: {
-			nextEl: ".areaSwiper-button-next",
-			prevEl: ".areaSwiper-button-prev",
-		},
-		effect: "fade",
-	});
-</script>
-<script>
-	(function ($) {
-		$(window).on("load", function () {
-			$(".content").mCustomScrollbar({
-				axis: "y",
-				scrollbarPosition: "string", // horizontal scrollbar
-			});
+	let winds = document.querySelectorAll(".cardWind-num");
+
+	winds.forEach(windItem => {
+		let inpValue = windItem.querySelector("input");
+		let addOne = windItem.querySelector(".ar_right");
+		let delOne = windItem.querySelector(".ar_left");
+
+		addOne.addEventListener("click", () => {
+			let result = Number(inpValue.value);
+			inpValue.value = result + 1;
 		});
-	})(jQuery);
+
+		delOne.addEventListener("click", () => {
+			let result = Number(inpValue.value);
+			inpValue.value = result - 1;
+			if (result > 1) {
+				inpValue.value = result - 1;
+			} else {
+				inpValue.value = 0;
+			}
+		});
+	});
+
+	winds[1].querySelector('input').addEventListener("onchange", () => {
+		console.log(i++);
+	})
+	
+	console.log(winds[1].querySelector('input'));
+
 </script>
 
 </html>
