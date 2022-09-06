@@ -85,9 +85,39 @@
 </body>
 
 <script>
+	const coefficient = {
+		cof_0: 100,
+		cof_1: 200,
+		cof_2: 300,
+		cof_3: 400,
+	}
+	let areaPrice = document.querySelector('.area__score-sum span');
 	let winds = document.querySelectorAll(".cardWind-num");
+	let totalPrice = 0;
 
-	winds.forEach(windItem => {
+	let windowList = {
+		window_0: 0,
+		window_1: 0,
+		window_2: 0,
+		window_3: 0,
+	};
+
+	const getTotalSum = () => {
+		console.log(Object.values(windowList))
+		let result = 0;
+		Object.values(windowList).forEach(value => {
+			result = result + value
+		})
+		return result
+	}
+
+	const changePrice = (value, indexWindow) => {
+		console.log(indexWindow)
+		windowList[`window_${indexWindow}`] = Number(value) * coefficient[`cof_${indexWindow}`]
+		areaPrice.innerText = getTotalSum()
+	}
+
+	winds.forEach((windItem, index) => {
 		let inpValue = windItem.querySelector("input");
 		let addOne = windItem.querySelector(".ar_right");
 		let delOne = windItem.querySelector(".ar_left");
@@ -95,11 +125,13 @@
 		addOne.addEventListener("click", () => {
 			let result = Number(inpValue.value);
 			inpValue.value = result + 1;
+			changePrice(result, index)
 		});
 
 		delOne.addEventListener("click", () => {
 			let result = Number(inpValue.value);
 			inpValue.value = result - 1;
+			changePrice(result, index)
 			if (result > 1) {
 				inpValue.value = result - 1;
 			} else {
@@ -108,11 +140,9 @@
 		});
 	});
 
-	winds[1].querySelector('input').addEventListener("onchange", () => {
-		console.log(i++);
+	winds[0].querySelector('input').addEventListener('change', () => {
+		console.log('SFSDF');
 	})
-	
-	console.log(winds[1].querySelector('input'));
 
 </script>
 
