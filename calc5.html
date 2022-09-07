@@ -58,17 +58,17 @@
 				<p class="area__title">Выберите услугу</p>
 				<div class="area__checked">
 					<div class="checkbox">
-						<input class="custom-checkbox" type="checkbox" id="1" name="1" data-add="150">
+						<input class="custom-checkbox" type="checkbox" id="1" name="1" data-add="0.3">
 						<label for="1">Москитные сетки</label>
 					</div>
 
 					<div class="checkbox">
-						<input class="custom-checkbox" type="checkbox" id="2" name="2" data-add="150">
+						<input class="custom-checkbox" type="checkbox" id="2" name="2" data-add="0.5">
 						<label for="2">Жалюзи</label>
 					</div>
 
 					<div class="checkbox">
-						<input class="custom-checkbox" type="checkbox" id="3" name="3" data-add="150">
+						<input class="custom-checkbox" type="checkbox" id="3" name="3" data-add="1">
 						<label for="3">Окно+балконная дверь</label>
 					</div>
 
@@ -93,13 +93,15 @@
 	}
 	let areaPrice = document.querySelector('.area__score-sum span');
 	let winds = document.querySelectorAll(".cardWind-num");
+	let areaCheckedCheckbox = document.querySelectorAll(".area__checked .custom-checkbox");
 
-	const changePrice = () => {
+	const getPrice = () => {
 		let result = 0;
 		winds.forEach((item, index) => {
 			result = result + (Number(item.querySelector('input').value) * coefficient[`cof_${index}`])
 		})
-		areaPrice.innerHTML = result
+
+		return result
 	}
 
 	winds.forEach((windItem, index) => {
@@ -110,23 +112,40 @@
 		addOne.addEventListener("click", () => {
 			let result = Number(inpValue.value);
 			inpValue.value = result + 1;
-			changePrice(result, index)
-			areaPrice.innerHTML = getTotalSum(windowList)
+			areaPrice.innerHTML = getPrice()
+
 		});
 
 		delOne.addEventListener("click", () => {
 			let result = Number(inpValue.value);
-			// changePrice()
 			if (result > 1) {
 				inpValue.value = result - 1;
-				changePrice()
+				areaPrice.innerHTML = getPrice()
 			} else {
 				inpValue.value = 0;
-				changePrice()
+				areaPrice.innerHTML = getPrice()
 			}
 		});
+
+		windItem.addEventListener('change', () => {
+			areaPrice.innerHTML = getPrice()
+		})
 	});
 
+	areaCheckedCheckbox.forEach(checkbox => {
+		checkbox.addEventListener('change', (event) => {
+			let target = event.target
+			let percent = target.getAttribute('data-add')
+			let totalPrice = Number(areaPrice.innerHTML)
+			let additionalPrice = getPrice() * percent
+			console.log(target.checked)
+			if (target.checked) {
+				areaPrice.innerHTML = totalPrice + additionalPrice
+			} else {
+				areaPrice.innerHTML = totalPrice - additionalPrice
+			}
+		})
+	})
 
 </script>
 
