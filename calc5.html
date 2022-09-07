@@ -76,7 +76,7 @@
 
 				<div class="area__score">
 					<p>Итого</p>
-					<div class="area__score-sum"><span>2500</span> ₽</div>
+					<div class="area__score-sum"><span>0</span> ₽</div>
 				</div>
 				<button class="btn btn-blue">Заказать уборку</button>
 			</div>
@@ -93,28 +93,13 @@
 	}
 	let areaPrice = document.querySelector('.area__score-sum span');
 	let winds = document.querySelectorAll(".cardWind-num");
-	let totalPrice = 0;
 
-	let windowList = {
-		window_0: 0,
-		window_1: 0,
-		window_2: 0,
-		window_3: 0,
-	};
-
-	const getTotalSum = () => {
-		console.log(Object.values(windowList))
+	const changePrice = () => {
 		let result = 0;
-		Object.values(windowList).forEach(value => {
-			result = result + value
+		winds.forEach((item, index) => {
+			result = result + (Number(item.querySelector('input').value) * coefficient[`cof_${index}`])
 		})
-		return result
-	}
-
-	const changePrice = (value, indexWindow) => {
-		console.log(indexWindow)
-		windowList[`window_${indexWindow}`] = Number(value) * coefficient[`cof_${indexWindow}`]
-		areaPrice.innerText = getTotalSum()
+		areaPrice.innerHTML = result
 	}
 
 	winds.forEach((windItem, index) => {
@@ -126,23 +111,22 @@
 			let result = Number(inpValue.value);
 			inpValue.value = result + 1;
 			changePrice(result, index)
+			areaPrice.innerHTML = getTotalSum(windowList)
 		});
 
 		delOne.addEventListener("click", () => {
 			let result = Number(inpValue.value);
-			inpValue.value = result - 1;
-			changePrice(result, index)
+			// changePrice()
 			if (result > 1) {
 				inpValue.value = result - 1;
+				changePrice()
 			} else {
 				inpValue.value = 0;
+				changePrice()
 			}
 		});
 	});
 
-	winds[0].querySelector('input').addEventListener('change', () => {
-		console.log('SFSDF');
-	})
 
 </script>
 
