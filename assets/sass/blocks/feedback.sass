@@ -1,0 +1,142 @@
+.feedback
+	margin-bottom: 135px
+	h2
+		width: auto
+	&-page
+		.container
+			flex-direction: column
+			align-items: center
+			display: flex!important
+		.feedback
+			&-header
+				margin-bottom: 124px
+	.btn
+		&-blue
+			max-width: 235px
+			margin: 0 auto
+			background: #DFF1FF
+			border-radius: 8px
+			color: #2196F3
+	.container
+		display: block
+	&-header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 40px
+		width: 100%
+		h2
+			margin-bottom: 0
+		a
+			font-weight: 500
+			font-size: 14px
+			line-height: 20px
+			color: #A6A6A6
+			min-width: fit-content
+	&-slider
+		position: relative
+		overflow: hidden
+		padding-bottom: 115px
+		padding-top: 50px
+	&-cards
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		margin-bottom: 60px
+		.feedback
+			&-card
+				margin-right: 30px
+				position: relative
+				border-radius: 0px 10px 10px 10px
+				&:nth-child(3n)
+					margin-right: 0px
+					
+	&-card
+		max-width: 350px
+		width: 100%
+		background: #DFF1FF
+		padding: 30px
+		border-radius: 10px
+		border-radius: 0px 10px 10px 10px
+		&:hover
+			background: #2196F3
+			.feedback-user span
+				color: #fff
+		p
+			font-weight: 400
+			
+			line-height: 145%
+		&__rate
+			display: flex
+			align-items: center
+			padding: 6px
+			position: absolute
+			bottom: 100%
+			border-radius: 20px 10px 0px 0px
+			background: #DFF1FF
+			left: 0
+			width: 270px
+			img
+				width: 25px
+				height: 25px
+				margin-right: 8px
+			p,a
+				font-weight: 400
+				
+				line-height: 110%
+				color: #2196F3
+	&-user
+		display: flex
+		align-items: center
+		margin-bottom: 20px
+		span
+			margin-top: 10px
+			font-weight: 700
+			font-size: 20px
+			line-height: 130%
+			color: #2196F3
+		&__photo
+			width: 80px
+			height: 80px
+			border-radius: 50%
+			background: #fff
+			margin-right: 17px
+			display: flex
+			justify-content: center
+			overflow: hidden
+	.main
+		&-pagination
+			margin: 0px 24px
+			display: flex
+			align-items: center
+		&-slider
+			&-nav
+				z-index: 1
+
+@media screen and (max-width: 1199px)
+	.feedback
+		&-header
+			a
+				font-size: 18px
+
+@media screen and (max-width: 991px)
+	.feedback
+		&-page
+			.feedback
+				&-cards
+					flex-wrap: wrap
+				&-card
+					margin-right: 20px
+					margin-bottom: 60px
+					&:nth-child(2n)
+						margin-right: 0px
+		&-header
+			a
+				font-size: 16px
+
+@media screen and (max-width: 575px)
+	.feedback
+		&-page
+			.feedback
+				&-card
+					margin-right: 0px

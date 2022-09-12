@@ -1,0 +1,55 @@
+.questions
+	margin-bottom: 156px
+	.btn
+		max-width: 350px
+		margin: 62px auto 0px
+
+	&-box
+		border-top: 1px solid rgba(#193347, 0.5)
+		width: 100%
+	&-list
+		border-bottom: 1px solid rgba(#193347, 0.5)
+	&-answer
+		height: 0
+		overflow: hidden
+		transition: all 1s ease 
+		opacity: 0
+		padding: 0px 21px
+		&-active
+			padding: 0px 21px 16px
+			min-height: 30px
+			height: auto
+			opacity: 1
+	&-article
+		position: relative
+		padding: 16px 55px 16px 21px
+		font-weight: 400
+		
+		line-height: 165.1%
+		&::before
+			content: ''
+			position: absolute
+			right: 18px
+			top: 26px
+			width: 24px
+			height: 2px
+			background: #2196F3
+		&::after
+			content: ''
+			position: absolute
+			right: 29px
+			top: 15px
+			width: 2px
+			height: 24px
+			background: #2196F3
+			transition: all 0.3s ease
+			
+		&-active
+			&::after
+				opacity: 0
+
+
+@media screen and (max-width: 575px)
+	.questions
+		&-article
+			line-height: 120%

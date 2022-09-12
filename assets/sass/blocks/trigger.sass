@@ -1,0 +1,89 @@
+.why
+	padding-top: 124px
+	padding-bottom: 196px
+	background: #2196F3 url(../img/svg/PATTERN.svg) no-repeat center fixed
+	margin-bottom: 204px
+	background-size: cover
+	h2
+		color: #fff
+		margin-bottom: 56px
+		width: 100%
+	&-cards
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		align-content: stretch
+	&-card
+		display: flex
+		max-width: 540px
+		width: 100%
+		min-height: 160px
+		border-radius: 10px
+		overflow: hidden
+		margin-bottom: 30px
+		&__img
+			display: flex
+			justify-content: center
+			align-items: center
+			position: relative
+			min-width: 100px
+			background: #252525
+			img
+				z-index: 1
+			&::before
+				position: absolute
+				content: ''
+				display: block
+				width: 30px
+				height: 30px
+				background: #252525
+				right: -5px
+				top: 50%
+				transform: translateY(-50%) rotateZ(45deg)
+		&__text
+			padding: 26px 32px 26px 39px
+			background: #fff
+			width: 100%
+			h4
+				font-style: normal
+				font-weight: 700
+				font-size: 24px
+				line-height: 130%
+				margin-bottom: 5px
+			p
+				font-style: normal
+				font-weight: 400
+				
+				line-height: 120%
+				color: #2196F3
+
+
+@media screen and (max-width: 1199px)
+	.why
+		padding-top: 100px
+		padding-bottom: 100px
+		margin-bottom: 100px
+		&-card
+			max-width: 460px
+
+@media screen and (max-width: 991px)
+	.why
+		&-card
+			max-width: 345px
+			h4
+				font-size: 22px
+			p
+				font-size: 14px
+			&__text
+				padding: 20px
+			&__img
+				min-width: 70px
+				img
+					width: 40px
+
+@media screen and (max-width: 767px)
+	.why
+		&-card
+			max-width: none

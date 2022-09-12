@@ -1,0 +1,194 @@
+.feedback {
+  margin-bottom: 135px;
+}
+.feedback h2 {
+  width: auto;
+}
+.feedback-page .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+.feedback-page .feedback-header {
+  margin-bottom: 124px;
+}
+.feedback .btn-blue {
+  max-width: 235px;
+  margin: 0 auto;
+  background: #DFF1FF;
+  border-radius: 8px;
+  color: #2196F3;
+}
+.feedback .container {
+  display: block;
+}
+.feedback-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+.feedback-header h2 {
+  margin-bottom: 0;
+}
+.feedback-header a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #A6A6A6;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.feedback-slider {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 115px;
+  padding-top: 50px;
+}
+.feedback-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
+.feedback-cards .feedback-card {
+  margin-right: 30px;
+  position: relative;
+  border-radius: 0px 10px 10px 10px;
+}
+.feedback-cards .feedback-card:nth-child(3n) {
+  margin-right: 0px;
+}
+.feedback-card {
+  max-width: 350px;
+  width: 100%;
+  background: #DFF1FF;
+  padding: 30px;
+  border-radius: 10px;
+  border-radius: 0px 10px 10px 10px;
+}
+.feedback-card:hover {
+  background: #2196F3;
+}
+.feedback-card:hover .feedback-user span {
+  color: #fff;
+}
+.feedback-card p {
+  font-weight: 400;
+  line-height: 145%;
+}
+.feedback-card__rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px;
+  position: absolute;
+  bottom: 100%;
+  border-radius: 20px 10px 0px 0px;
+  background: #DFF1FF;
+  left: 0;
+  width: 270px;
+}
+.feedback-card__rate img {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+}
+.feedback-card__rate p, .feedback-card__rate a {
+  font-weight: 400;
+  line-height: 110%;
+  color: #2196F3;
+}
+.feedback-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.feedback-user span {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  color: #2196F3;
+}
+.feedback-user__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+.feedback .main-pagination {
+  margin: 0px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.feedback .main-slider-nav {
+  z-index: 1;
+}
+
+@media screen and (max-width: 1199px) {
+  .feedback-header a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .feedback-page .feedback-cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .feedback-page .feedback-card {
+    margin-right: 20px;
+    margin-bottom: 60px;
+  }
+  .feedback-page .feedback-card:nth-child(2n) {
+    margin-right: 0px;
+  }
+  .feedback-header a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .feedback-page .feedback-card {
+    margin-right: 0px;
+  }
+}

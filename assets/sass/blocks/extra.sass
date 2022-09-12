@@ -1,0 +1,80 @@
+.extra
+	margin-bottom: 200px
+	flex-direction: column
+	h2
+		margin-bottom: 60px
+	&-cards
+		display: flex
+		align-items: flex-start
+		width: 100%
+		flex-wrap: wrap
+	&-card
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		max-width: 350px
+		width: 100%
+		margin-right: 30px
+		margin-bottom: 30px
+		&:nth-child(3n)
+			margin-right: 0px
+			
+		h4
+			font-weight: 700
+			font-size: 24px
+			line-height: 130%
+			color: #FEFFFF
+			margin-bottom: 6px
+		p
+			font-weight: 400
+			line-height: 145%
+			color: #FEFFFF
+		.btn
+			border-radius: 10px
+			border-top-left-radius: 0px
+			border-top-right-radius: 0px
+			max-width: none
+			height: 50px
+	&-price
+		padding: 8px 30px
+		border-top-left-radius: 20px
+		border-top-right-radius: 10px
+		background: #DFF1FF
+		font-weight: 700
+		font-size: 18px
+		line-height: 110%
+		color: #2196F3
+	&-text
+		width: 100%
+		padding: 23px 30px 28px
+		background: #FF9534
+		border-top-right-radius: 10px
+
+@media screen and (max-width: 1199px)
+	.extra
+		&-cards
+			flex-wrap: wrap
+		&-card
+			margin-right: 20px
+			&:nth-child(3n)
+				margin-right: 20px
+			&:nth-child(2n)
+				margin-right: 0px
+
+@media screen and (max-width: 767px)
+	.extra
+		&-card
+			max-width: none
+			margin-right: 0px!important
+			h4
+				font-size: 20px
+
+
+@media screen and (max-width: 767px)
+	.extra
+		&-cards
+			width: max-content
+			flex-wrap: nowrap
+		&-card
+			width: 260px
+			margin-right: 30px!important

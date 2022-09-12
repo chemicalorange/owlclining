@@ -1,0 +1,84 @@
+.gallery
+	margin-bottom: 140px
+	&-filter
+		margin-bottom: 40px
+		ul
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			li
+				margin-right: 5px
+				margin-bottom: 5px
+				padding: 10px 20px
+				font-weight: 500
+				
+				line-height: 100%
+				color: #2196F3
+				background: #DFF1FF
+				border-radius: 4px
+				display: flex
+				justify-content: center
+				align-items: center
+				cursor: pointer
+				&.filter-active
+					color: #fff
+					background: #2196F3
+	&-block
+		width: 100%
+	&-swiper
+		&__bottom
+			width: 100%
+			overflow: hidden
+			.swiper
+				&-slide
+					width: 93px
+					height: 52px
+					border-radius: 6px
+					overflow: hidden
+					cursor: pointer
+					&-thumb-active
+						position: relative
+						&::before
+							position: absolute
+							content: ''
+							top: 0
+							left: 0
+							width: 100%
+							height: 100%
+							background: linear-gradient(0deg, rgba(33, 150, 243, 0.5), rgba(33, 150, 243, 0.5))
+					img
+						width: 100%
+						height: auto
+		&__top
+			width: 100%
+			overflow: hidden
+			height: 621px
+			margin-bottom: 20px
+			.swiper
+				&-slide
+					border-radius: 10px
+					overflow: hidden
+					.container1
+						display: flex
+						justify-content: center
+						align-items: center
+						overflow: hidden
+						position: static
+
+@media screen and (max-width: 991px)
+	.gallery
+		&-swiper
+			&__top
+				height: auto
+			&__bottom 
+				.swiper-slide
+					height: auto
+
+@media screen and (max-width: 575px)
+	.gallery
+		&-filter
+			width: 320px
+			overflow-x: scroll
+			ul
+				width: 550px
+					

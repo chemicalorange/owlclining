@@ -1,0 +1,26 @@
+.seo {
+  margin-bottom: 200px;
+}
+.seo h2 {
+  color: #2196F3;
+}
+.seo-text {
+  max-width: 805px;
+}
+.seo-text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.seo-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .seo-text p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

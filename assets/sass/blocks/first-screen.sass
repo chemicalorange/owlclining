@@ -1,0 +1,176 @@
+.main
+	padding-top: 36px
+	margin-bottom: 90px
+	&-slider
+		width: 100%
+		overflow: hidden
+		position: relative
+		padding-bottom: 150px
+		&-nav
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+	&-pagination
+		width: fit-content!important
+		z-index: 1
+		margin: 0px 25px
+		display: flex
+		align-items: center
+		.swiper
+			&-pagination
+				&-bullet
+					background: #fff
+					border: 1px solid #2196F3
+					width: 8px
+					height: 8px
+					opacity: 1
+					&-active
+						border: 1px solid #2196F3
+						background: #2196F3
+				
+
+	.swiper
+		&-wrapper
+			width: 100%
+		&-slide
+			width: 100%
+			display: flex
+			justify-content: space-between
+			align-items: center
+			background: #fff
+	&-text
+		padding-top: 65px
+		max-width: 560px	
+		width: 100%
+		position: relative
+		h1
+			margin-bottom: 15px
+		p
+			font-weight: 500
+			line-height: 100%
+			max-width: 430px
+			margin-bottom: 55px
+	&-bg
+		max-width: 442px	
+		width: 100%
+		height: 392px
+		background: url(../img/svg/main-bg.svg) no-repeat center
+		background-size: cover
+		position: absolute
+		left: calc(100% + 40px)
+		top: 0
+	&-button
+		&-next
+			content: ''
+			display: block
+			min-width: 36px
+			height: 36px	
+			background: #2196F3
+			background-size: contain
+			z-index: 1
+			cursor: pointer
+			position: relative
+			border-radius: 50%
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				right: 50%
+				width: 11px
+				height: 15px
+				transform: translate(50%,-50%)
+				background: url(../img/icons/arrow-slide-right.svg) no-repeat center
+				background-size: cover
+		&-prev
+			content: ''
+			display: block
+			min-width: 36px
+			height: 36px
+			background: #2196F3
+			background-size: contain
+			z-index: 1
+			cursor: pointer
+			position: relative
+			border-radius: 50%
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 11px
+				height: 15px
+				transform: translate(-50%,-50%)
+				background: url(../img/icons/arrow-slide-left.svg) no-repeat center
+				background-size: cover
+
+@media screen and ( max-width: 1199px)
+
+	.main
+		&-bg
+			max-width: 380px
+			width: 100%
+			height: 336px
+			left: 100%
+	
+@media screen and (max-width: 991px)
+	.main
+		&-text
+			max-width: 380px
+		&-bg
+			height: 338px
+			left: 100%
+@media screen and (max-width: 767px)
+	.main
+		&-slider
+			padding-bottom: 50px
+		&-bg
+			position: relative
+			left: auto
+			top: auto
+			order: 3
+			max-width: 383px
+			margin: 0 auto
+			margin-bottom: 15px
+		&-text
+			max-width: none
+			display: flex
+			flex-direction: column
+			padding-top: 0px
+			h1
+				order: 1
+				text-align: center
+				margin-bottom: 11px
+			p
+				order: 4
+			.btn
+				order: 2
+				margin: 0 auto
+				margin-bottom: 30px
+@media screen and (max-width: 575px)
+	.main
+		&-bg
+			display: block
+			max-width: 234px
+			height: 206px
+		&-text
+			.btn
+				width: 140px
+				height: 34px
+				font-weight: 500
+				font-size: 12px
+				line-height: 100%
+				margin-bottom: 26px
+			p
+				font-weight: 400
+				font-size: 12px
+				line-height: 110%
+				margin-bottom: 30px
+		
+		&-slider
+			.btn
+				&-orange
+					max-width: none

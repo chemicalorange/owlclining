@@ -1,3 +1,4 @@
+//Готов
 .header
 	display: flex
 	// display: none
@@ -90,3 +91,63 @@
 				font-size: 12px
 				line-height: 100%
 				color: #2196F3
+
+@media screen and (max-width: 991px)
+
+	.header
+		&-contacts
+			flex-direction: column
+			&__info
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0px	
+		&-bottom 
+			.container 
+				.btn
+					display: none
+
+	.breadcrumb
+		span
+			font-size: 12px
+
+@media screen and (max-width: 767px)
+	.header
+		top: 0
+		&-active
+			height: 100vh
+			display: block
+		&-logo
+			margin-right: unset
+			max-width: 159px
+		&-top
+			padding: 10px 0px
+		&-links
+			margin-right: unset
+			img
+				height: 24px
+		&-contacts
+			display: none
+			flex-direction: row
+		&-top
+			.header
+				&-links
+					display: none
+		&-bottom
+			position: absolute
+			padding: 22px 15px 150px
+			top: auto
+			left: -101%
+			height: 100%
+			width: 100%
+			align-items: flex-start
+			overflow-y: scroll
+			background: #DFF1FF
+			.header
+				&-links
+					display: flex
+			.container
+				flex-direction: column
+				max-width: 320px
+				align-items: flex-start
+			&__active
+				left: 0

@@ -13,6 +13,18 @@
 	<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="/assets/css/twentytwenty.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="/assets/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="/assets/css/exampleWork.css">
+	<link rel="stylesheet" href="/assets/css/after-before.css">
+	<link rel="stylesheet" href="/assets/css/trigger.css">
+	<link rel="stylesheet" href="/assets/css/feedback.css">
+	<link rel="stylesheet" href="/assets/css/questions.css">
+	<link rel="stylesheet" href="/assets/css/deal.css">
+	<link rel="stylesheet" href="/assets/css/first-screen.css">
+
+
+
+
+
 </head>
 
 <body>
@@ -376,30 +388,28 @@
 							<div class="main-text">
 								<h1>Услуги недорогого клининга в Самаре и области</h1>
 								<p>Не следует, однако забывать, что начало повседневной работы по формированию...</p>
+								<div class="main-bg">
+								</div>
 								<button class="btn btn-orange">Заказать уборку</button>
 							</div>
-							<div class="main-bg">
 
+						</div>
+						<div class="swiper-slide">
+							<div class="main-text">
+								<h1>Услуги недорогого клининга в Самаре и области</h1>
+								<p>Не следует, однако забывать, что начало повседневной работы по формированию...</p>
+								<div class="main-bg">
+								</div>
+								<button class="btn btn-orange">Заказать уборку</button>
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="main-text">
 								<h1>Услуги недорогого клининга в Самаре и области</h1>
 								<p>Не следует, однако забывать, что начало повседневной работы по формированию...</p>
+								<div class="main-bg">
+								</div>
 								<button class="btn btn-orange">Заказать уборку</button>
-							</div>
-							<div class="main-bg">
-
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="main-text">
-								<h1>Услуги недорогого клининга в Самаре и области</h1>
-								<p>Не следует, однако забывать, что начало повседневной работы по формированию...</p>
-								<button class="btn btn-orange">Заказать уборку</button>
-							</div>
-							<div class="main-bg">
-
 							</div>
 						</div>
 					</div>
@@ -412,7 +422,7 @@
 			</div>
 		</section>
 
-		<section class="service">
+		<!-- <section class="service">
 			<div class="container">
 				<h2>Услуги</h2>
 				<div class="service-cards">
@@ -448,25 +458,19 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="container1">
-								<!-- The before image is first -->
 								<img src="/assets/img/example/IMG_1773.jpeg" />
-								<!-- The after image is last -->
 								<img src="/assets/img/example/IMG_1781.jpeg" />
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="container1">
-								<!-- The before image is first -->
 								<img src="/assets/img/example/IMG_1773.jpeg" />
-								<!-- The after image is last -->
 								<img src="/assets/img/example/IMG_1781.jpeg" />
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="container1">
-								<!-- The before image is first -->
 								<img src="/assets/img/example/IMG_1773.jpeg" />
-								<!-- The after image is last -->
 								<img src="/assets/img/example/IMG_1781.jpeg" />
 							</div>
 						</div>
@@ -807,7 +811,7 @@
 					<img src="/assets/img/svg/callback-bg.svg" alt="">
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<footer class="footer">
 			<div class="container">
@@ -890,23 +894,41 @@
 
 
 	<script>
+		if (window.innerWidth <= 575) {
+
+			let cardCircle = document.querySelectorAll('.card-circle');
+			let cardArrow = document.querySelectorAll('.card-arrow');
+			cardCircle.forEach((item) => {
+				let cardItemText = item.querySelector('h4');
+				let cardItemTextBlock = item.querySelector('.card-circle__text');
+				cardItemTextBlock.prepend(cardItemText);
+			})
+			cardArrow.forEach((itemArrow) => {
+				let cardArrowText = itemArrow.querySelector('h4');
+				let cardItemArrowBlock = itemArrow.querySelector('.card-arrow__img');
+				cardItemArrowBlock.prepend(cardArrowText);
+			})
+		}
+	</script>
+
+	<script>
 		let dropMenu = document.querySelectorAll('.submenu-drop');
 		let btnDrop = document.querySelectorAll('.submenu-drop li');
 
-dropMenu.forEach(item => {
-  item.addEventListener("click", e => {
-    item.classList.toggle("submenu-drop-active");
-  });
-})
+		dropMenu.forEach(item => {
+			item.addEventListener("click", e => {
+				item.classList.toggle("submenu-drop-active");
+			});
+		})
 
-btnDrop.forEach(item => {
-  item.addEventListener("click", e => {
-    item.classList.toggle("submenu-active");
-  });
-})
+		btnDrop.forEach(item => {
+			item.addEventListener("click", e => {
+				item.classList.toggle("submenu-active");
+			});
+		})
 
 
-let burger = document.querySelector('.burger');
+		let burger = document.querySelector('.burger');
 		let menu = document.querySelector('.header-bottom');
 		let header = document.querySelector('.header');
 		let btn = document.querySelectorAll('.btn');
@@ -928,43 +950,6 @@ let burger = document.querySelector('.burger');
 		})
 
 	</script>
-
-
-
-	<!-- let dropMenu = document.querySelector('.submenu');
-let links = dropMenu.querySelectorAll('li a');
-
-let arrayCount = [];
-let indexSelect;
-
-
-links.forEach((linksItem, index) => {
-	arrayCount[index] = 0;
-	linksItem.addEventListener('click', (event) => {
-		if(!indexSelect){
-			event.preventDefault();
-			indexSelect = index;
-			return;
-		}
-
-		if (indexSelect === index) {
-			if (arrayCount[index] === 0) {
-				event.preventDefault();
-				arrayCount[index] = 1;
-			} else {
-				arrayCount[index] = 0;
-			}
-		} else {
-			indexSelect = index;
-			arrayCount.forEach((arrayCountItem, index) => {
-				arrayCountItem[index] = 0;
-			});
-		}
-
-	});
-
-}) -->
-
 
 </body>
 
