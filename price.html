@@ -114,8 +114,9 @@
 			<div class="container">
 				<h2>Уборка квартир</h2>
 				<div class="price-sidebar">
+					<div class="drop-select" style="width: 300px;height: 150px;"></div>
 					<ul class="service-filter-panel">
-						<li><a href="#"  data-serv="apartment">Уборка квартир</a></li>
+						<li><a href="#" data-serv="apartment">Уборка квартир</a></li>
 						<li><a href="#" data-serv="home">Уборка частных домов</a></li>
 						<li><a href="#" data-serv="office">Уборка офисов</a></li>
 						<li><a href="#" data-serv="builder">Уборка зданий и помещений</a></li>
@@ -125,7 +126,7 @@
 						<li><a href="#" data-serv="carpet">Химчистка ковров</a></li>
 						<li><a href="#" data-serv="furniture">Химчистка кожанной мебели</a></li>
 						<li><a href="#" data-serv="furniture_2">Химчистка мягкой мебели</a></li>
-						
+
 					</ul>
 				</div>
 				<div class="price-cards">
@@ -152,6 +153,46 @@
 				</div>
 			</div>
 		</section>
+
+		<script>
+			const hideOptions = (event) => {
+				if (
+					event.target.className !== "area__select-input" &&
+					event.target.className !== "options__item"
+				) {
+					areaSelect.forEach((item) => {
+						item.querySelector(".options").classList.remove("active");
+					});
+
+					document.removeEventListener("click", hideOptions);
+				}
+			};
+
+
+
+			let areaSelect = document.querySelectorAll(".price-sidebar");
+
+			areaSelect.forEach((item) => {
+				let areaSelectInput = item.querySelector(".drop-select");
+				let options = item.querySelector(".service-filter-panel");
+				let optionsItems = item.querySelectorAll("li a");
+
+				areaSelectInput.addEventListener("click", () => {
+					options.classList.toggle("active");
+					document.addEventListener("click", hideOptions);
+				});
+
+				optionsItems.forEach((option) => {
+					option.addEventListener("click", (event) => {
+						areaSelectInput.innerText = event.target.innerText;
+						areaSelectInput.setAttribute('data-price', option.getAttribute('data-price'));
+						options.classList.remove("active");
+						price();
+					});
+				});
+			});
+		</script>
+
 
 		<footer class="footer">
 			<div class="container">
@@ -212,6 +253,7 @@
 
 	</div>
 
+	<script src="/assets/js/filter-category.js"></script>
 
 </body>
 
