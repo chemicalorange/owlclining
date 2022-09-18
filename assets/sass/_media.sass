@@ -677,11 +677,29 @@
 				height: 220px
 	
 	.price
+		overflow: unset	
 		&-sidebar
-			width: 320px
-			overflow-x: scroll
+			position: relative
 			ul
-				width: 550px
+				flex-wrap: nowrap
+				overflow-y: scroll
+				li
+					width: 100%
+					padding: 5px 14px
+					border-bottom: 1px solid #d7d7d7
+					margin: 0px
+					a, .current-cat
+						border-radius: 0
+						background: transparent!important
+						color: #1e1e1e!important
+						font-weight: 400
+						font-size: 14px
+					&:last-child
+						border: none
+					&:hover 
+						background-color: #2196F3
+						a
+							color: #fff!important
 		&-card
 			width: 100%
 			max-width: none
@@ -699,6 +717,58 @@
 					max-width: 140px
 					margin-bottom: 0px
 
+	.drop
+		&-select
+			border: 1px solid #D7D7D7
+			border-radius: 8px
+			padding: 19px 14px
+			position: relative
+			line-height: 100%
+			font-weight: 400
+			width: 100%
+			&:before
+				content: ''
+				position: absolute
+				right: 16px
+				top: 50%
+				transform: translateY(-50%)
+				display: block
+				width: 25px
+				height: 25px
+				background: url(../img/icons/down-arrow.svg) no-repeat center
+				background-size: cover
+
+	.service
+		&-filter
+			&-panel
+				position: absolute
+				top: 100%
+				width: 100%
+				margin-top: 4px
+				left: 0
+				height: 0
+				flex-direction: column
+				z-index: 3
+				background: #fff
+				&.active
+					height: 250px
+					border: 1px solid #D7D7D7
+					border-radius: 8px
+
+// 	&__item
+// 		padding: 19px 14px
+// 		border-bottom: 1px solid #d7d7d7
+// 		&:last-child
+// 			border: none
+// 		&:hover 
+// 			background-color: #2196F3
+// 			color: #fff
+
+
+// .options.active 
+// 	height: auto
+// 	border: 1px solid #D7D7D7
+// 	border-radius: 8px
 
 	.rating
 		&-cards

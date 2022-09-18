@@ -4514,12 +4514,38 @@ form br {
   .post-card__img {
     height: 220px;
   }
+  .price {
+    overflow: unset;
+  }
   .price-sidebar {
-    width: 320px;
-    overflow-x: scroll;
+    position: relative;
   }
   .price-sidebar ul {
-    width: 550px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-y: scroll;
+  }
+  .price-sidebar ul li {
+    width: 100%;
+    padding: 5px 14px;
+    border-bottom: 1px solid #d7d7d7;
+    margin: 0px;
+  }
+  .price-sidebar ul li a, .price-sidebar ul li .current-cat {
+    border-radius: 0;
+    background: transparent !important;
+    color: #1e1e1e !important;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .price-sidebar ul li:last-child {
+    border: none;
+  }
+  .price-sidebar ul li:hover {
+    background-color: #2196F3;
+  }
+  .price-sidebar ul li:hover a {
+    color: #fff !important;
   }
   .price-card {
     width: 100%;
@@ -4547,264 +4573,45 @@ form br {
     max-width: 140px;
     margin-bottom: 0px;
   }
-  .rating-cards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .rating-card {
-    max-width: none;
-    margin-bottom: 40px;
-  }
-  .rating-card img {
-    width: auto;
-    height: auto;
-  }
-  .post-content blockquote {
-    padding: 15px;
-    border-top: 5px solid #FF9534;
-    border-bottom: 5px solid #FF9534;
-  }
-  .post-content blockquote::before {
-    top: -5px;
-    width: 20px;
-    height: 10px;
-  }
-  .post-content blockquote::after {
-    bottom: -5px;
-    width: 20px;
-    height: 10px;
-  }
-  .post-content blockquote p {
-    font-size: 16px;
-    line-height: 100%;
-  }
-  .post-content blockquote cite {
-    font-size: 12px;
-    line-height: 100%;
-  }
-  .steps-cards__rect {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-width: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .steps-cards__circleBig {
-    padding: 110px 20px;
-  }
-  .steps-cards__square {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    min-width: auto;
-  }
-  .steps-cards__circle {
-    min-width: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .steps-cards__arrow {
-    min-width: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .steps .container-scroll {
-    overflow-x: unset;
-  }
-  .card-rect {
-    padding: 22px 22px 28px 22px;
-  }
-  .card-rect h4 {
-    font-size: 20px;
-    line-height: 110%;
-    margin-bottom: 2px;
-  }
-  .card-rect p {
-    font-size: 12px;
-    line-height: 110%;
-  }
-  .card-rect::before {
-    top: calc(100% - 1px);
-    width: 20px;
-    height: 10px;
-    right: 50%;
-    -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
-            clip-path: polygon(100% 0, 0 0, 50% 100%);
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
-  }
-  .card-rect:nth-child(1) {
-    border-radius: 5px 5px 0px 0px;
-  }
-  .card-rect:last-child {
-    border-radius: 0px 0px 5px 5px;
-  }
-  .card-square {
-    margin-bottom: 63px;
-    margin-right: 0px;
-  }
-  .card-square::before {
-    display: none;
-  }
-  .card-circle {
-    margin-right: 0px;
-    max-width: 207px;
-    margin-bottom: 112px;
-  }
-  .card-circle h4 {
+  .drop-select {
+    border: 1px solid #D7D7D7;
+    border-radius: 8px;
+    padding: 19px 14px;
     position: relative;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 110%;
-    text-align: center;
-    color: #FFFFFF;
-  }
-  .card-circle p {
+    line-height: 100%;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 110%;
-    text-align: center;
+    width: 100%;
   }
-  .card-circle__text {
-    width: 207px;
-    height: 207px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 25px;
-  }
-  .card-circle:first-child::before {
-    left: 50%;
-    top: auto;
-    bottom: calc(100% + 20px);
-    -webkit-transform: translate(-20px, -50%);
-            transform: translate(-20px, -50%);
-  }
-  .card-circle:last-child::after {
-    right: 50%;
-    top: calc(100% + 53px);
-    -webkit-transform: translate(20px, -50%);
-            transform: translate(20px, -50%);
-  }
-  .card-circle:nth-child(2n)::before {
-    left: 37%;
-    top: auto;
-    bottom: calc(100% + 39px);
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  .card-circle:nth-child(2n) img {
-    -webkit-transform: translate(-75%, 9%) rotateZ(90deg);
-            transform: translate(-75%, 9%) rotateZ(90deg);
-  }
-  .card-circle:nth-child(2)::after {
-    left: 45%;
-    right: auto;
-    top: calc(100% + 39px);
-    -webkit-transform: rotateZ(291deg);
-            transform: rotateZ(291deg);
-  }
-  .card-circle img {
-    -webkit-transform: translate(-25%, 9%) rotateZ(270deg);
-            transform: translate(-25%, 9%) rotateZ(270deg);
-    width: 345px;
-  }
-  .card-arrow {
-    margin-right: 0px;
-    height: 202px;
-    margin-bottom: 35px;
-    position: relative;
-  }
-  .card-arrow:last-child {
-    margin: 0 !important;
-  }
-  .card-arrow:nth-child(odd) p {
-    left: -13px;
-  }
-  .card-arrow:nth-child(even) p {
-    text-align: right;
-    right: -13px;
-  }
-  .card-arrow__img {
-    width: 121px;
-    height: 121px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .card-arrow__img::before {
-    -webkit-transform: translate(-50%, -50%) rotate(90deg);
-            transform: translate(-50%, -50%) rotate(90deg);
-    width: 248px;
-    height: 48px;
-  }
-  .card-arrow h4 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 110%;
-    color: #FFFFFF;
-  }
-  .card-arrow p {
+  .drop-select:before {
+    content: "";
     position: absolute;
-    bottom: 0;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 110%;
-    color: #1E1E1E;
-    max-width: 104px;
-    text-align: left;
+    right: 16px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url(../img/icons/down-arrow.svg) no-repeat center;
+    background-size: cover;
   }
-  .circleBig-card {
-    min-width: 60px;
-    max-width: 60px;
-    height: 60px;
+  .service-filter-panel {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    margin-top: 4px;
+    left: 0;
+    height: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 3;
+    background: #fff;
   }
-  .circleBig-card h4 {
-    font-size: 20px;
-  }
-  .circleBig-card p {
-    font-size: 14px;
-  }
-  .circleBig-card::after {
-    height: 85px;
-  }
-  .circleBig-card__center span {
-    font-size: 32px;
+  .service-filter-panel.active {
+    height: 250px;
+    border: 1px solid #D7D7D7;
+    border-radius: 8px;
   }
 }

@@ -120,12 +120,42 @@ filter.forEach((filterItem) => {
 					},
 				});
 			}
+		});
+	});
+});
 
-
+const hideShowOpt = (event) => {
+	if (
+		event.target.className !== "area__select-input" &&
+		event.target.className !== "options__item"
+	) {
+		areaSelect2.forEach((item) => {
+			item.querySelector(".options").classList.remove("active");
 		});
 
+		document.removeEventListener("click", hideShowOpt);
+	}
+};
 
 
 
+let areaSelect2 = document.querySelectorAll(".gallery-filter");
+
+areaSelect2.forEach((item) => {
+	let areaSelectInput2 = item.querySelector(".drop-select");
+	let opt = item.querySelector(".filter-items");
+	let optItems = item.querySelectorAll("li a");
+
+	areaSelectInput2.addEventListener("click", () => {
+		opt.classList.toggle("active");
+		document.addEventListener("click", hideShowOpt);
+	});
+
+	optItems.forEach((option) => {
+		option.addEventListener("click", (event) => {
+			areaSelectInput2.innerText = event.target.innerText;
+			areaSelectInput2.setAttribute('data-price', option.getAttribute('data-price'));
+			opt.classList.remove("active");
+		});
 	});
 });

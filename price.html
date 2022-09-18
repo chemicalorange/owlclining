@@ -114,7 +114,7 @@
 			<div class="container">
 				<h2>Уборка квартир</h2>
 				<div class="price-sidebar">
-					<div class="drop-select" style="width: 300px;height: 150px;"></div>
+					<div class="drop-select">Выбрать...</div>
 					<ul class="service-filter-panel">
 						<li><a href="#" data-serv="apartment">Уборка квартир</a></li>
 						<li><a href="#" data-serv="home">Уборка частных домов</a></li>
@@ -155,39 +155,38 @@
 		</section>
 
 		<script>
-			const hideOptions = (event) => {
+			const hideShowOpt = (event) => {
 				if (
 					event.target.className !== "area__select-input" &&
 					event.target.className !== "options__item"
 				) {
-					areaSelect.forEach((item) => {
+					areaSelect2.forEach((item) => {
 						item.querySelector(".options").classList.remove("active");
 					});
 
-					document.removeEventListener("click", hideOptions);
+					document.removeEventListener("click", hideShowOpt);
 				}
 			};
 
 
 
-			let areaSelect = document.querySelectorAll(".price-sidebar");
+			let areaSelect2 = document.querySelectorAll(".price-sidebar");
 
-			areaSelect.forEach((item) => {
-				let areaSelectInput = item.querySelector(".drop-select");
-				let options = item.querySelector(".service-filter-panel");
-				let optionsItems = item.querySelectorAll("li a");
+			areaSelect2.forEach((item) => {
+				let areaSelectInput2 = item.querySelector(".drop-select");
+				let opt = item.querySelector(".service-filter-panel");
+				let optItems = item.querySelectorAll("li a");
 
-				areaSelectInput.addEventListener("click", () => {
-					options.classList.toggle("active");
-					document.addEventListener("click", hideOptions);
+				areaSelectInput2.addEventListener("click", () => {
+					opt.classList.toggle("active");
+					document.addEventListener("click", hideShowOpt);
 				});
 
-				optionsItems.forEach((option) => {
+				optItems.forEach((option) => {
 					option.addEventListener("click", (event) => {
 						areaSelectInput.innerText = event.target.innerText;
 						areaSelectInput.setAttribute('data-price', option.getAttribute('data-price'));
-						options.classList.remove("active");
-						price();
+						opt.classList.remove("active");
 					});
 				});
 			});
