@@ -2954,6 +2954,9 @@ form br {
   background-size: cover;
   z-index: 1;
 }
+.card-rectBig:nth-child(odd):is(:last-child) {
+  background: #000;
+}
 .card-rectBig:nth-child(odd) .card-rectBig__numb {
   left: -33px;
 }
@@ -2968,8 +2971,14 @@ form br {
   background-size: cover;
   z-index: 1;
 }
+.card-rectBig:nth-child(even) {
+  padding-right: 60px;
+}
 .card-rectBig:nth-child(even) .card-rectBig__numb {
   right: -21px;
+}
+.card-rectBig:nth-child(even) .card-rectBig__text h4, .card-rectBig:nth-child(even) .card-rectBig__text p {
+  text-align: right;
 }
 .card-rectBig:nth-child(even)::before {
   position: absolute;
@@ -3709,6 +3718,12 @@ form br {
     width: 40px;
     height: 40px;
     font-size: 18px;
+  }
+  .card-rectBig:nth-child(even) {
+    padding-right: 15px;
+  }
+  .card-rectBig:nth-child(even) .card-rectBig__text h4, .card-rectBig:nth-child(even) .card-rectBig__text p {
+    text-align: left;
   }
   .card-rectBig:nth-child(even) .card-rectBig__numb {
     right: auto;

@@ -207,6 +207,8 @@ form
 				background-size: cover
 				z-index: 1
 		&:nth-child(odd)
+			&:is(:last-child)
+				background: #000
 			.card-rectBig__numb
 				left: -33px
 			&::after
@@ -220,8 +222,12 @@ form
 				background-size: cover
 				z-index: 1
 		&:nth-child(even)
+			padding-right: 60px
 			.card-rectBig__numb
 				right: -21px
+			.card-rectBig__text
+				h4,p
+					text-align: right
 			&::before
 				position: absolute
 				bottom: -71px
@@ -824,6 +830,10 @@ form
 				height: 40px
 				font-size: 18px
 			&:nth-child(even)
+				padding-right: 15px
+				.card-rectBig__text
+					h4,p
+						text-align: left
 				.card-rectBig__numb
 					right: auto
 					left: -27px

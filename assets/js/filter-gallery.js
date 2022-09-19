@@ -144,7 +144,7 @@ let areaSelect2 = document.querySelectorAll(".gallery-filter");
 areaSelect2.forEach((item) => {
 	let areaSelectInput2 = item.querySelector(".drop-select");
 	let opt = item.querySelector(".filter-items");
-	let optItems = item.querySelectorAll("li a");
+	let optItems = item.querySelectorAll("li");
 
 	areaSelectInput2.addEventListener("click", () => {
 		opt.classList.toggle("active");
