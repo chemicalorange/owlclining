@@ -141,11 +141,6 @@ const hideShowOpt = (event) => {
 let areaSelect2 = document.querySelectorAll(".gallery-filter");
 
 areaSelect2.forEach((item) => {
-<<<<<<< HEAD
-	let areaSelectInput2 = item.querySelector(".drop-select");
-	let opt = item.querySelector(".filter-items");
-	let optItems = item.querySelectorAll("li");
-=======
   let areaSelectInput2 = item.querySelector(".drop-select");
   let opt = item.querySelector(".filter-items");
   let optItems = item.querySelectorAll("li");
@@ -154,8 +149,6 @@ areaSelect2.forEach((item) => {
     opt.classList.toggle("active");
     document.addEventListener("click", hideShowOpt);
   });
->>>>>>> 30d117e04b6f089f217f073c246d3e5b761d2164
-
   optItems.forEach((option) => {
     option.addEventListener("click", (event) => {
       console.log("work");
