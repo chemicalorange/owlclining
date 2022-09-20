@@ -1,11 +1,13 @@
 .main
 	padding-top: 36px
 	margin-bottom: 90px
+	.container
+		position: relative
+		padding-bottom: 150px
 	&-slider
 		width: 100%
 		overflow: hidden
 		position: relative
-		padding-bottom: 150px
 		&-nav
 			display: flex
 			justify-content: center
@@ -110,6 +112,8 @@
 @media screen and ( max-width: 1199px)
 
 	.main
+		.container
+			padding-bottom: 90px
 		&-bg
 			max-width: 380px
 			width: 100%
@@ -126,8 +130,10 @@
 @media screen and (max-width: 767px)
 	.main
 		padding-top: 16px
-		&-slider
+		.container
 			padding-bottom: 50px
+		&-slider
+			order: 4
 		&-bg
 			position: relative
 			left: auto

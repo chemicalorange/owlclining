@@ -3,6 +3,8 @@
 	width: 100%
 	display: flex
 	flex-direction: column
+	.swiper-notification
+		display: none
 	&__cards
 		display: flex
 		width: 100%
@@ -137,15 +139,27 @@
 			justify-content: space-between
 			align-items: center
 	&__slider
+		margin-top: 45px
 		margin-bottom: 65px
 		display: flex
 		justify-content: space-between
 		align-items: center
-		max-width: 252px
+		max-width: 320px
 		width: 100%
 		overflow: hidden
-		.swiper-wrapper
-			max-width: 127px
+		position: relative
+		.swiper
+			&-wrapper
+				max-width: 320px
+			&-slide
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				img
+					height: 100px
+					margin-bottom: 20px
+					max-width: 200px
 
 	&__service
 		margin-bottom: 65px
@@ -261,7 +275,7 @@
 	margin-top: 4px
 	left: 0
 	height: 0
-	z-index: 3
+	z-index: 5
 	background: #fff
 	overflow: hidden
 
@@ -279,6 +293,7 @@
 	height: auto
 	border: 1px solid #D7D7D7
 	border-radius: 8px
+	z-index: 5
 
 
 	&__del
@@ -312,8 +327,10 @@
 			background: url(../img/icons/arrow-blue.svg) no-repeat center
 			background-size: cover
 			cursor: pointer
-			position: relative
 			z-index: 3
+			position: absolute
+			left: 0
+			top: 35px
 		&-next
 			min-width: 45px
 			height: 45px
@@ -321,9 +338,10 @@
 			background-size: cover
 			cursor: pointer
 			transform: rotateZ(180deg)
-			position: relative
 			z-index: 3
-
+			position: absolute
+			top: 35px
+			right: 0
 
 #add_one, #del_one
 	border-radius: 100%
@@ -410,6 +428,8 @@
 		width: 2px!important
 		height: 300%!important
 		margin: -140px auto!important
+
+
 
 @media screen and (max-width: 991px)
 	.area

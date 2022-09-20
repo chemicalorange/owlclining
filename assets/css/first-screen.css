@@ -2,11 +2,14 @@
   padding-top: 36px;
   margin-bottom: 90px;
 }
+.main .container {
+  position: relative;
+  padding-bottom: 150px;
+}
 .main-slider {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding-bottom: 150px;
 }
 .main-slider-nav {
   display: -webkit-box;
@@ -139,6 +142,9 @@
 }
 
 @media screen and (max-width: 1199px) {
+  .main .container {
+    padding-bottom: 90px;
+  }
   .main-bg {
     max-width: 380px;
     width: 100%;
@@ -159,8 +165,13 @@
   .main {
     padding-top: 16px;
   }
-  .main-slider {
+  .main .container {
     padding-bottom: 50px;
+  }
+  .main-slider {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
   .main-bg {
     position: relative;
