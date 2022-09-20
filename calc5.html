@@ -12,76 +12,79 @@
 </head>
 
 <body>
-	<div class="wrap">
-		<div class="area area__calc-six" style="margin-top: 100px">
+	<section class="calc">
+		<div class="container">
+			<div class="area area__calc-six">
 
-			<div class="area__cards">
-				<div class="cardWind">
-					<div class="cardWind-img"><img src="/assets/img/calc/wind-1.svg" alt=""></div>
-					<p>Одностворчатое</p>
-					<div class="cardWind-num">
-						<div id="del_one" class="ar_left"></div>
-						<input type="number" data-number="100" min="0" max="99" value="0">
-						<div id="add_one" class="ar_right"></div>
+				<div class="area__cards">
+					<div class="cardWind">
+						<div class="cardWind-img"><img src="/assets/img/calc/wind-1.svg" alt=""></div>
+						<p>Одностворчатое</p>
+						<div class="cardWind-num">
+							<div id="del_one" class="ar_left"></div>
+							<input type="number" data-number="100" min="0" max="99" value="0">
+							<div id="add_one" class="ar_right"></div>
+						</div>
+					</div>
+					<div class="cardWind">
+						<div class="cardWind-img"><img src="/assets/img/calc/wind-2.svg" alt=""></div>
+						<p>Двухстворчатое</p>
+						<div class="cardWind-num">
+							<div id="del_one" class="ar_left"></div>
+							<input type="number" data-number="200" min="0" max="99" value="0">
+							<div id="add_one" class="ar_right"></div>
+						</div>
+					</div>
+					<div class="cardWind">
+						<div class="cardWind-img"><img src="/assets/img/calc/wind-3.svg" alt=""></div>
+						<p>Трехстворчатое</p>
+						<div class="cardWind-num">
+							<div id="del_one" class="ar_left"></div>
+							<input type="number" data-number="300" min="0" max="99" value="0">
+							<div id="add_one" class="ar_right"></div>
+						</div>
+					</div>
+					<div class="cardWind">
+						<div class="cardWind-img"><img src="/assets/img/calc/wind-4.svg" alt=""></div>
+						<p> Балкон или лоджия</p>
+						<div class="cardWind-num">
+							<div id="del_one" class="ar_left"></div>
+							<input type="number" data-number="400" min="0" max="99" value="0">
+							<div id="add_one" class="ar_right"></div>
+						</div>
 					</div>
 				</div>
-				<div class="cardWind">
-					<div class="cardWind-img"><img src="/assets/img/calc/wind-2.svg" alt=""></div>
-					<p>Двухстворчатое</p>
-					<div class="cardWind-num">
-						<div id="del_one" class="ar_left"></div>
-						<input type="number" data-number="200" min="0" max="99" value="0">
-						<div id="add_one" class="ar_right"></div>
-					</div>
-				</div>
-				<div class="cardWind">
-					<div class="cardWind-img"><img src="/assets/img/calc/wind-3.svg" alt=""></div>
-					<p>Трехстворчатое</p>
-					<div class="cardWind-num">
-						<div id="del_one" class="ar_left"></div>
-						<input type="number" data-number="300" min="0" max="99" value="0">
-						<div id="add_one" class="ar_right"></div>
-					</div>
-				</div>
-				<div class="cardWind">
-					<div class="cardWind-img"><img src="/assets/img/calc/wind-4.svg" alt=""></div>
-					<p> Балкон или лоджия</p>
-					<div class="cardWind-num">
-						<div id="del_one" class="ar_left"></div>
-						<input type="number" data-number="400" min="0" max="99" value="0">
-						<div id="add_one" class="ar_right"></div>
-					</div>
-				</div>
-			</div>
 
-			<div class="area__small-box">
-				<p class="area__title">Выберите услугу</p>
-				<div class="area__checked">
-					<div class="checkbox">
-						<input class="custom-checkbox" type="checkbox" id="1" name="1" data-add="0.3">
-						<label for="1">Москитные сетки</label>
+				<div class="area__small-box">
+					<p class="area__title">Выберите услугу</p>
+					<div class="area__checked">
+						<div class="checkbox">
+							<input class="custom-checkbox" type="checkbox" id="1" name="1" data-add="0.3">
+							<label for="1">Москитные сетки</label>
+						</div>
+
+						<div class="checkbox">
+							<input class="custom-checkbox" type="checkbox" id="2" name="2" data-add="0.5">
+							<label for="2">Жалюзи</label>
+						</div>
+
+						<div class="checkbox">
+							<input class="custom-checkbox" type="checkbox" id="3" name="3" data-add="1">
+							<label for="3">Окно+балконная дверь</label>
+						</div>
+
 					</div>
 
-					<div class="checkbox">
-						<input class="custom-checkbox" type="checkbox" id="2" name="2" data-add="0.5">
-						<label for="2">Жалюзи</label>
+					<div class="area__score">
+						<p>Итого</p>
+						<div class="area__score-sum"><span>0</span> ₽</div>
 					</div>
-
-					<div class="checkbox">
-						<input class="custom-checkbox" type="checkbox" id="3" name="3" data-add="1">
-						<label for="3">Окно+балконная дверь</label>
-					</div>
-
+					<button class="btn btn-blue">Заказать уборку</button>
 				</div>
-
-				<div class="area__score">
-					<p>Итого</p>
-					<div class="area__score-sum"><span>0</span> ₽</div>
-				</div>
-				<button class="btn btn-blue">Заказать уборку</button>
 			</div>
 		</div>
-	</div>
+		</div>
+	</section>
 </body>
 
 <script>

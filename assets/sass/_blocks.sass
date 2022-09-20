@@ -208,13 +208,21 @@ form
 				z-index: 1
 		&:nth-child(odd)
 			&:is(:last-child)
-				background: #000
+				&::before
+					position: absolute
+					content: ''
+					bottom: -81px
+					right: 6px
+					background: #2196F3
+					width: 20px
+					height: 20px
+					border-radius: 50%		
 			.card-rectBig__numb
 				left: -33px
 			&::after
 				position: absolute
-				bottom: -71px
-				left: -6px
+				bottom: -81px
+				left: -13px
 				content: ''
 				width: 920px
 				height: 136px
@@ -223,6 +231,16 @@ form
 				z-index: 1
 		&:nth-child(even)
 			padding-right: 60px
+			&:is(:last-child)
+				&::after
+					position: absolute
+					content: ''
+					bottom: -81px
+					left: -13px
+					background: #2196F3
+					width: 20px
+					height: 20px
+					border-radius: 50%
 			.card-rectBig__numb
 				right: -21px
 			.card-rectBig__text
@@ -740,6 +758,10 @@ form
 					top: -6px
 					left: 0px
 			&:nth-child(even)
+				&:is(:last-child)
+					&::after
+						bottom: -61px
+						left: -8px
 				.card-rectBig__numb
 					right: -27px
 				&::before
@@ -748,6 +770,10 @@ form
 					bottom: -54px
 					left: 0px
 			&:nth-child(odd)
+				&:is(:last-child)
+					&::before
+						bottom: -61px
+						right: -6px
 				.card-rectBig__numb
 					left: -27px
 				&::after
@@ -778,6 +804,11 @@ form
 					top: 0px
 					left: 0px
 			&:nth-child(even)
+				&:is(:last-child)
+					&::after
+						bottom: -39px	
+						left: -8px
+
 				.card-rectBig__numb
 					right: -27px
 				&::before
@@ -786,6 +817,10 @@ form
 					bottom: -39px
 					left: 0px
 			&:nth-child(odd)
+				&:is(:last-child)
+					&::before
+						bottom: -39px	
+						right: -8px
 				.card-rectBig__numb
 					left: -27px
 				&::after

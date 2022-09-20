@@ -104,9 +104,44 @@
 @media screen and (max-width: 575px) {
   .gallery-filter {
     width: 320px;
-    overflow-x: scroll;
+    position: relative;
   }
   .gallery-filter ul {
-    width: 550px;
+    height: 0;
+    border-radius: 8px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    margin-top: 4px;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 3;
+    background: #fff;
+    overflow: hidden;
+  }
+  .gallery-filter ul li {
+    width: 100%;
+    padding: 15px 34px;
+    border-bottom: 1px solid #d7d7d7;
+    margin: 0px;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0);
+    color: #1e1e1e;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .gallery-filter ul li:last-child {
+    border: none;
+  }
+  .filter-items.active {
+    overflow-y: scroll;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: 160px;
+    border: 1px solid #d7d7d7;
+    border-radius: 8px;
   }
 }

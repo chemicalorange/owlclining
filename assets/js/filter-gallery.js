@@ -130,9 +130,9 @@ const hideShowOpt = (event) => {
     event.target.className !== "area__select-input" &&
     event.target.className !== "options__item"
   ) {
-    areaSelect2.forEach((item) => {
-      item.querySelector(".options").classList.remove("active");
-    });
+    // areaSelect2.forEach((item) => {
+    //   item.querySelector(".options").classList.remove("active");
+    // });
 
     document.removeEventListener("click", hideShowOpt);
   }

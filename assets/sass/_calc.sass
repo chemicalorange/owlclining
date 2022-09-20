@@ -171,6 +171,8 @@
 			justify-content: space-between
 			padding: 14px 20px 14px 10px
 			border-bottom: 1px solid #d7d7d7
+			&:last-child
+				border: none
 		&-wrap
 			display: flex
 			align-items: center
@@ -311,7 +313,7 @@
 			background-size: cover
 			cursor: pointer
 			position: relative
-			z-index: 1
+			z-index: 3
 		&-next
 			min-width: 45px
 			height: 45px
@@ -320,7 +322,7 @@
 			cursor: pointer
 			transform: rotateZ(180deg)
 			position: relative
-			z-index: 1
+			z-index: 3
 
 
 #add_one, #del_one
@@ -403,9 +405,54 @@
 		cursor: pointer
 		border-radius: 8px
 
+.mCSB_scrollTools
+	.mCSB_draggerRail
+		width: 2px!important
+		height: 300%!important
+		margin: -140px auto!important
 
 @media screen and (max-width: 991px)
 	.area
 		&__score
 			&-sum
 				color: #000
+
+@media screen and (max-width: 767px)
+	.cardWind 
+		max-width: 135px
+		&-num
+			input
+				width: 40px
+				padding: 5px
+				font-size: 12px
+		&-img
+			height: 200px
+			img
+				width: 100%
+				height: 100px
+		p
+			font-size: 12px
+
+@media screen and (max-width: 575px)
+	.cardWind
+		max-width: 50%
+		margin-bottom: 30px
+		&-img
+			height: 160px
+			img
+				height: 70px
+		&:nth-child(odd)
+			.cardWind
+				&-img
+					border: 1px solid #d9d9d9
+					border-radius: 8px 0px 0px 8px
+		&:nth-child(even)
+			.cardWind
+				&-img
+					border-radius: 0px 8px 8px 0px
+
+			
+	.area
+		&__cards
+			margin-bottom: 20px
+			flex-wrap: wrap
