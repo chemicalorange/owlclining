@@ -1,124 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/jquery.mCustomScrollbar.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Document</title>
-	<link rel="stylesheet" href="./assets/css/style.min.css" />
-	<link rel="stylesheet" href="./assets/css/jquery.mCustomScrollbar.min.css" />
-	<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
-</head>
+  <body>
+    <section class="calc">
+      <div class="container">
+        <div class="area">
+          <p class="area__title">Выберите услугу</p>
+          <div class="area__select">
+            <input type="text" />
+            <div
+              class="area__select-input"
+              id="filt"
+              data-category=""
+              data-price="220"
+            >
+              Выбрать...
+            </div>
+            <div class="options">
+              <div class="options__item" data-category="1" data-price="150">
+                Химчитска дивана
+              </div>
+              <div class="options__item" data-category="2" data-price="1000">
+                Химчитска дивана
+              </div>
+            </div>
+          </div>
+          <p class="area__title">Форма дивана:</p>
+          <div class="area__slider">
+            <div class="areaSwiper-button-prev"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-category="150">
+                <img src="./assets/img/furniture/couch.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="150">
+                <img src="./assets/img/furniture/couch-2.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="150">
+                <img src="./assets/img/furniture/couch-3.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="150">
+                <img src="./assets/img/furniture/couch-4.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="150">
+                <img src="./assets/img/furniture/couch-5.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="1000">
+                <img src="./assets/img/furniture/chair.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="1000">
+                <img src="./assets/img/furniture/chair-2.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="1000">
+                <img src="./assets/img/furniture/chair-3.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="1000">
+                <img src="./assets/img/furniture/chair-4.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="1000">
+                <img src="./assets/img/furniture/chair-5.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="1000">
+                <img src="./assets/img/furniture/chair-6.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+              <div class="swiper-slide" data-category="1000">
+                <img src="./assets/img/furniture/chair-7.svg" alt="" />
+                <p>Диван двухместный</p>
+              </div>
+            </div>
 
-<body>
-	<section class="calc">
-		<div class="container">
+            <div class="areaSwiper-button-next"></div>
+          </div>
+          <p class="area__title">Материал:</p>
+          <div class="area__select">
+            <input type="text" />
+            <div class="area__select-input" data-price="220">Текстиль</div>
+            <div class="options">
+              <div class="options__item" data-price="220">Текстиль</div>
+              <div class="options__item" data-price="150">Текстиль</div>
+              <div class="options__item" data-price="1000">Текстиль</div>
+            </div>
+          </div>
+          <div class="area__score">
+            <p>Итого</p>
+            <div class="area__score-sum"><span>2500</span> ₽</div>
+          </div>
+          <button class="btn btn-blue">Заказать уборку</button>
+        </div>
+      </div>
+    </section>
+  </body>
 
-			<div class="area">
-				<p class="area__title">Выберите услугу</p>
-				<div class="area__select">
-					<input type="text" />
-					<div class="area__select-input" id="filt" data-category="" data-price="220">
-						Выбрать...
-					</div>
-					<div class="options">
-						<div class="options__item" data-category="1" data-price="150">Химчитска дивана</div>
-						<div class="options__item" data-category="2" data-price="1000">Химчитска дивана</div>
-					</div>
-				</div>
-				<p class="area__title">Форма дивана:</p>
-				<div class="area__slider">
-					<div class="areaSwiper-button-prev"></div>
-					<div class="swiper-wrapper">
-						<div class="swiper-slide" data-category="1">
-							<img src="/assets/img/furniture/couch.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="1">
-							<img src="/assets/img/furniture/couch-2.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="1">
-							<img src="/assets/img/furniture/couch-3.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="1">
-							<img src="/assets/img/furniture/couch-4.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="1">
-							<img src="/assets/img/furniture/couch-5.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="2">
-							<img src="/assets/img/furniture/chair.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="2">
-							<img src="/assets/img/furniture/chair-2.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="2">
-							<img src="/assets/img/furniture/chair-3.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="2">
-							<img src="/assets/img/furniture/chair-4.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="2">
-							<img src="/assets/img/furniture/chair-5.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="2">
-							<img src="/assets/img/furniture/chair-6.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-						<div class="swiper-slide" data-category="2">
-							<img src="/assets/img/furniture/chair-7.svg" alt="" />
-							<p>Диван двухместный</p>
-						</div>
-
-					</div>
-
-					<div class="areaSwiper-button-next"></div>
-				</div>
-				<p class="area__title">Материал:</p>
-				<div class="area__select">
-					<input type="text" />
-					<div class="area__select-input" data-price="220">Текстиль</div>
-					<div class="options">
-						<div class="options__item" data-price="220">Текстиль</div>
-						<div class="options__item" data-price="150">Текстиль</div>
-						<div class="options__item" data-price="1000">Текстиль</div>
-					</div>
-				</div>
-				<div class="area__score">
-					<p>Итого</p>
-					<div class="area__score-sum"><span>2500</span> ₽</div>
-				</div>
-				<button class="btn btn-blue">Заказать уборку</button>
-			</div>
-
-		</div>
-	</section>
-</body>
-
-<script src="/assets/js/index-calc5.js"></script>
-<script src="./assets/js/swiper-bundle.min.js"></script>
-<script>
-	const swiper2 = new Swiper('.area__slider', {
-		loop: true,
-		pagination: {
-			el: '.main-pagination',
-			clickable: true,
-		},
-		navigation: {
-			nextEl: '.areaSwiper-button-next',
-			prevEl: '.areaSwiper-button-prev',
-		},
-	});
-</script>
-
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <script src="./assets/js/index-calc5.js"></script>
+  <script></script>
 </html>
