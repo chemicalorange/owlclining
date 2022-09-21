@@ -161,3 +161,5 @@ areaSelect2.forEach((item) => {
     });
   });
 });
+
+
