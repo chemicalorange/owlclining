@@ -1,5 +1,7 @@
 let areaRadioList = document.querySelector(".area__radio-list");
 let areaSelect = document.querySelectorAll(".area__select");
+let selectService = document.querySelector(".select_service");
+let selectServiceItem = selectService.querySelectorAll(".options__item");
 let areaService = document.querySelector(".area__service");
 let areaServiceItem = areaService?.querySelectorAll(".area__service-item");
 let areaPrice = document.querySelector(".area__score-sum span");
@@ -16,6 +18,35 @@ var swiper = new Swiper(".area__slider", {
     nextEl: ".areaSwiper-button-next",
     prevEl: ".areaSwiper-button-prev",
   },
+});
+
+selectServiceItem.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    let dataPriceOption = item.getAttribute("data-price");
+    swiperSliderItem.forEach((item, index) => {
+      console.log("worj");
+      swiper.destroy();
+      if (item.getAttribute("data-category") === dataPriceOption) {
+        item.classList.remove("swiper-slide");
+        item.classList.add("hide");
+        item.setAttribute("style", "display: none");
+      } else {
+        item.removeAttribute("style");
+        item.classList.add("swiper-slide");
+      }
+    });
+    swiper = new Swiper(".area__slider", {
+      loop: true,
+      pagination: {
+        el: ".main-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".areaSwiper-button-next",
+        prevEl: ".areaSwiper-button-prev",
+      },
+    });
+  });
 });
 
 const hideOptions = (event) => {
@@ -43,34 +74,12 @@ areaSelect.forEach((item) => {
 
   optionsItems.forEach((option) => {
     option.addEventListener("click", (event) => {
-      swiper.destroy();
       let dataPriceOption = option.getAttribute("data-price");
       areaSelectInput.innerText = event.target.innerText;
       areaSelectInput.setAttribute("data-price", dataPriceOption);
       options.classList.remove("active");
 
-      swiperSliderItem.forEach((item, index) => {
-        if (item.getAttribute("data-category") === dataPriceOption) {
-          item.classList.remove("swiper-slide");
-          item.classList.add("hide");
-          item.setAttribute("style", "display: none");
-        } else {
-          item.removeAttribute("style");
-          item.classList.add("swiper-slide");
-        }
-      });
       price();
-      swiper = new Swiper(".area__slider", {
-        loop: true,
-        pagination: {
-          el: ".main-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".areaSwiper-button-next",
-          prevEl: ".areaSwiper-button-prev",
-        },
-      });
     });
   });
 });
