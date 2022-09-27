@@ -1,5 +1,48 @@
 .how
 	margin-bottom: 200px
+	background: #DFF1FF
+	padding: 60px 0px
+	&-tabs
+		display: flex
+		align-items: center
+		max-width: 855px
+		margin: 0 auto
+		padding: 15px
+		background: #FFFFFF
+		border-radius: 90px
+		margin-bottom: 55px
+		&__item
+			width: 255px
+			height: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #2196F3
+			font-weight: 700
+			font-size: 20px
+			line-height: 110%
+			background: #DFF1FF
+			border-radius: 90px
+			margin-right: 30px
+			cursor: pointer
+			&-active
+				background: #2196F3
+				color: #fff
+				position: relative
+				&::before
+					position: absolute
+					content: ''
+					display: block
+					width: 16px
+					height: 16px
+					background: #2196F3
+					z-index: 0
+					top: 100%
+					left: 50%
+					transform: rotateZ(45deg) translate(-50%,-50%)
+					border-radius: 4px
+			&:last-child
+				margin-right: 0px
 	&-cards
 		position: relative
 		width: 100%
@@ -7,16 +50,31 @@
 		position: relative
 		max-width: 980px
 		width: 100%
-		height: auto
 		margin: 0 auto
+		transform: scale(.85)
+		opacity: 0
+		display: none
+		&-active
+			display: block
+			animation: scaleFadeIn .5s linear normal forwards
 		img
 			width: 100%
 			height: auto
 	&-info
 		position: absolute
-		top: 20%
-		left: 20%
 		z-index: 1
+		&__right
+			.how
+				&-info
+					&__text
+						left: auto
+						right: 50%
+		&__top
+			.how
+				&-info
+					&__text
+						bottom: auto
+						top: 50%
 		&__btn
 			display: flex
 			justify-content: center
@@ -70,6 +128,15 @@
 				width: 200px
 				min-height: 80px
 				padding: 10px
+
+@keyframes scaleFadeIn
+	from
+		opacity: 0
+		transform: scale(.96)
+	to
+		opacity: 1
+		transform: scale(1) 
+
 
 @media screen and (max-width: 575px)
 	.how

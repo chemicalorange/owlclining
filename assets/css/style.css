@@ -2193,9 +2193,6 @@ section.callback, section.calc {
   margin-bottom: 20px;
   max-width: 200px;
 }
-.area__slider .hide {
-  display: none;
-}
 .area__service {
   margin-bottom: 65px;
   width: 100%;
