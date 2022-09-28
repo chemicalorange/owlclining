@@ -1,26 +1,26 @@
 let how = document.querySelectorAll('.how-info');
 
 const toggoleClassTarget = (elem) => {
-	elem.classList.toggle('how-info__btn-active');
-	elem.parentNode.querySelector('.how-info__text').classList.toggle('how-info__text-active');
+		elem.classList.toggle('how-info__btn-active');
+		elem.parentNode.querySelector('.how-info__text').classList.toggle('how-info__text-active');
 }
 
 how.forEach((howItem) => {
-	let howBtn = howItem.querySelector('.how-info__btn');
-	let howText = howItem.querySelector('.how-info__text');
-	howItem.addEventListener('click', (event) => {
-		let target = event.target
-		if (target.classList.contains('how-info__btn-active')) {
-			toggoleClassTarget(target)
-			return
-		}
-		how.forEach((howActive) => {
-			howActive.querySelector('.how-info__btn').classList.remove('how-info__btn-active');
-			howActive.querySelector('.how-info__text').classList.remove('how-info__text-active');
-		});
-		toggoleClassTarget(target)
+		let howBtn = howItem.querySelector('.how-info__btn');
+		let howText = howItem.querySelector('.how-info__text');
+		howItem.addEventListener('click', (event) => {
+				let target = event.target
+				if (target.classList.contains('how-info__btn-active')) {
+						toggoleClassTarget(target)
+						return
+				}
+				how.forEach((howActive) => {
+						howActive.querySelector('.how-info__btn').classList.remove('how-info__btn-active');
+						howActive.querySelector('.how-info__text').classList.remove('how-info__text-active');
+				});
+				toggoleClassTarget(target)
 
-	});
+		});
 
 });
 
@@ -28,9 +28,14 @@ how.forEach((howItem) => {
 //
 
 let howBox = document.querySelectorAll('.how-card');
+var howTabs = document.querySelector('.how-tabs');
 let howTab = document.querySelectorAll('.how-tabs__item');
-
 let i = 1;
+
+
+if(howTab.length === 0){
+	howTabs.style.display = "none";
+}
 
 howTab.forEach(tabItem => {
 	tabItem.setAttribute('data-index', i++);
