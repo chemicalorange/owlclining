@@ -35,7 +35,11 @@ let i = 1;
 
 if(howTab.length === 0){
 	howTabs.style.display = "none";
+} else {
+	howTab[0].classList.add('how-tabs__item-active');
 }
+
+howBox[0].classList.add('how-card-active');
 
 howTab.forEach(tabItem => {
 	tabItem.setAttribute('data-index', i++);
@@ -61,11 +65,9 @@ howBox.forEach(howItems => {
 	howModal.forEach(item => {
 		if (item.style.left >= 70 + '%') {
 			item.classList.add('how-info__right');
-			console.log(item)
 		}
 		if (item.style.top <= 25 + '%') {
 			item.classList.add('how-info__top');
-			console.log(item)
 		}
 	})
 })

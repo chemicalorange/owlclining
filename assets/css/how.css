@@ -2,6 +2,10 @@
   margin-bottom: 200px;
   background: #DFF1FF;
   padding: 60px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .how-tabs {
   display: -webkit-box;
@@ -72,10 +76,10 @@
   -webkit-transform: scale(0.85);
           transform: scale(0.85);
   opacity: 0;
-  display: none;
+  display: none !important;
 }
 .how-card-active {
-  display: block;
+  display: block !important;
   -webkit-animation: scaleFadeIn 0.5s linear normal forwards;
           animation: scaleFadeIn 0.5s linear normal forwards;
 }
