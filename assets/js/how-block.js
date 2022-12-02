@@ -18,17 +18,19 @@ document.addEventListener( 'click', (e) => {
 
 how.forEach((howItem) => {
 	howItem.addEventListener('click', (event) => {
+		event.stopPropagation();
 		let target = event.target;
+	// условие при наличии класса у родителя
 		if(target.parentNode.classList.contains('how-info__active')){
-			target.parentNode.classList.remove('how-info__active')
+			target.parentNode.classList.remove('how-info__active');
 		}
+		//----------------------------
 		target.parentNode.classList.toggle('how-info__active');
 		how.forEach((howActive) => {
 			howActive.classList.remove('how-info__active');
 		});
 		console.log(target.parentNode)
 		toggoleClassTarget(target);
-		event.stopPropagation();
 		// return;
 	});
 
