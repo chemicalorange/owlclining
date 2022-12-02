@@ -89,15 +89,16 @@
 }
 @media screen and (max-width: 767px) {
   .interest-cards {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-}
-@media screen and (max-width: 575px) {
   .interest-card {
-    min-width: 152px;
-    margin-right: 27px !important;
+    min-width: auto;
+    margin-right: 0px !important;
+    max-width: 250px;
   }
   .interest-card h4 {
     font-weight: 700;
@@ -119,11 +120,20 @@
   .interest-card__img img {
     width: 60%;
   }
-  .interest-cards {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+}
+@media screen and (max-width: 575px) {
+  .interest-card {
+    max-width: 150px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .interest-card__img {
+    width: 30px;
+    height: 30px;
+  }
+  .interest-card h4 {
+    font-size: 12px;
+    margin-bottom: 0px;
   }
 }

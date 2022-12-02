@@ -860,44 +860,45 @@ form
 @media screen and (max-width: 575px)
 	.card
 		&-rectBig
+			padding: 32px 32px 32px 50px
+			height: 232px
 			display: flex
-			align-items: flex-start
-			padding: 30px 15px 30px 45px
-			&__numb
-				left: 0px!important
-				width: 40px
-				height: 40px
-				font-size: 18px
-			&:nth-child(even)
-				padding-right: 15px
-				.card-rectBig__text
-					h4,p
-						text-align: left
-				.card-rectBig__numb
-					right: auto
-					left: -27px
-			&:last-child
-				&::after
-					display: none
+			align-items: center
+			&:first-child
 				&::before
-					display: none
-			&::before
-				width: 4px!important
-				height: 90%!important
-				top: 50%!important
-				left: 17px!important
-				background: #2196F3!important
-			&::after
-				width: 4px!important
-				height: 90%!important
-				top: 50%!important
-				left: 17px!important
-				background: #2196F3!important
+					width: 283px!important
+					height: 82px!important
+					top: -10px
+					background: url(../../assets/img/svg-steps/first-mob.svg) no-repeat center!important
+			&:nth-child(odd)
+				&::after
+					width: 282px
+					height: 136px
+					bottom: -68px
+					background: url(../../assets/img/svg-steps/top-mob.svg) no-repeat center
+			&:nth-child(even)
+				padding-left: 30px
+				&::before
+					width: 282px
+					height: 136px
+					bottom: -68px
+					background: url(../../assets/img/svg-steps/bottom-mob.svg) no-repeat center
+				&:is(:last-child)
+					&::after
+						bottom: -40px
+						left: -5px
+				///////////////////////////////////////////
+			&__text
+				align-items: center
 		&-types
 			justify-content: space-between
 		&-type
 			width: 150px
 			margin-right: 0px
 
+	.steps
+		&-cards
+			&__rectBig
+				width: 280px
 
 

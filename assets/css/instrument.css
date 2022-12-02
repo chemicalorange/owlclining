@@ -4,6 +4,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background: #DFF1FF;
 }
 .instrument-cards {
   display: -webkit-box;

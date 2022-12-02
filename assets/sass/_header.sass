@@ -117,15 +117,28 @@
 			font-size: 12px
 
 @media screen and (max-width: 767px)
+	@keyframes fadeUp
+		from
+			opacity: 0
+			transform: scale(.96) translateY(10px)
+		to
+			opacity: 1
+			transform: scale(1) translateY(0px)
 	.header
 		top: 0
 		&-phone
+			animation: fadeUp .3s linear normal forwards
 			&__visible
+				max-width: 540px
+				margin: 0 auto
 				display: flex
-				justify-content: center
 				align-items: center
 				margin-top: 10px
 				margin-bottom: 16px
+				img
+					margin-right: 10px
+				span
+					color: inherit
 		&-active
 			height: 100vh
 			display: block
@@ -138,11 +151,13 @@
 				img
 					width: auto
 				&+.header-phone
+					animation: fadeUp .3s linear normal forwards
 					display: block
 					margin-right: auto
 		&-top
 			padding: 10px 0px
 			border-bottom: 1px solid #D9D9D9
+			overflow: hidden
 		&-links
 			margin-right: unset
 			img
@@ -178,3 +193,11 @@
 	.pagination
 		margin-bottom: 10px!important
 		padding-top: 0px!important
+
+@media screen and (max-width: 575px)
+	.header
+		&-phone
+			&__visible
+				justify-content: flex-start
+				max-width: 320px
+				padding-left: 20px

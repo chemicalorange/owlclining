@@ -4,6 +4,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 80px;
+  background: #DFF1FF;
 }
 .exampleWork-cards {
   display: -webkit-box;

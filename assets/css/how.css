@@ -57,8 +57,8 @@
   z-index: 0;
   top: 100%;
   left: 50%;
-  -webkit-transform: rotateZ(45deg) translate(-50%, -50%);
-          transform: rotateZ(45deg) translate(-50%, -50%);
+  -webkit-transform: rotateZ(45deg) translate(-75%, 0%);
+          transform: rotateZ(45deg) translate(-75%, 0%);
   border-radius: 4px;
 }
 .how-tabs__item:last-child {
@@ -91,6 +91,18 @@
   position: absolute;
   z-index: 1;
 }
+.how-info__active {
+  z-index: 99;
+}
+.how-info__active .how-info__btn::before {
+  -webkit-transform: rotateZ(0deg) !important;
+          transform: rotateZ(0deg) !important;
+}
+.how-info__active .how-info__text {
+  width: 200px;
+  min-height: 80px;
+  padding: 10px;
+}
 .how-info__right .how-info__text {
   left: auto;
   right: 50%;
@@ -115,10 +127,6 @@
   border-radius: 50%;
   background: #2196F3;
   cursor: pointer;
-}
-.how-info__btn-active::before {
-  -webkit-transform: rotateZ(0deg) !important;
-          transform: rotateZ(0deg) !important;
 }
 .how-info__btn::after {
   position: absolute;
@@ -168,11 +176,6 @@
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.how-info__text-active {
-  width: 200px;
-  min-height: 80px;
-  padding: 10px;
-}
 
 @-webkit-keyframes scaleFadeIn {
   from {
@@ -200,6 +203,19 @@
   }
 }
 @media screen and (max-width: 575px) {
+  .how-tabs {
+    padding: 10px;
+  }
+  .how-tabs__item {
+    font-size: 14px;
+    width: 180px;
+    height: 40px;
+    padding: 0px 20px;
+  }
+  .how-tabs__item-active::before {
+    -webkit-transform: rotateZ(45deg) translate(-80%, -20%);
+            transform: rotateZ(45deg) translate(-80%, -20%);
+  }
   .how-card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -212,43 +228,23 @@
   .how-card img {
     margin-bottom: 30px;
   }
-  .how-info {
-    height: auto;
-    position: relative;
-    left: auto !important;
-    top: auto !important;
-    margin-bottom: 12px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .how-info__active .how-info__text {
+    width: 150px;
   }
   .how-info__btn {
-    min-width: 16px;
-    min-height: 16px;
     width: 16px;
     height: 16px;
-    margin-right: 10px;
+    border: 1px solid #fff;
   }
   .how-info__btn::before {
-    display: none;
+    width: 10px;
+    height: 2px;
   }
   .how-info__btn::after {
-    display: none;
+    width: 10px;
+    height: 2px;
   }
   .how-info__text {
-    text-align: left;
-    background: transparent;
-    color: #000;
-    width: auto;
-    height: auto;
-    position: relative;
-    left: auto;
-    bottom: auto;
-    padding-right: 24px;
-    font-size: 14px;
-  }
-  .how-info__text-active {
-    min-height: auto;
-    padding: 0px;
+    font-size: 10px;
   }
 }

@@ -4,6 +4,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 95px;
+  padding-bottom: 105px;
+  background: #DFF1FF;
 }
 .employees-photo {
   display: -webkit-box;
