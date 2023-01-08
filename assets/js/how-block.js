@@ -1,6 +1,6 @@
 let how = document.querySelectorAll('.how-info');
+let howBtn = document.querySelectorAll('.how-info__btn');
 let howAll = [how];
-console.log(howAll)
 
 const toggoleClassTarget = (elem) => {
 	elem.parentNode.classList.toggle('how-info__active');
@@ -9,33 +9,30 @@ const toggoleClassTarget = (elem) => {
 
 document.addEventListener( 'click', (e) => {
 	const withinBoundaries = e.composedPath().includes(howAll);
-	if ( ! withinBoundaries ) {
+	let target = e.target;
+	if ( ! withinBoundaries && !target.classList.contains('how-info__text')) {
 		how.forEach((howActive) => {
 			howActive.classList.remove('how-info__active');
 		});
 	}
-})
+});
 
-how.forEach((howItem) => {
-	howItem.addEventListener('click', (event) => {
+howBtn.forEach((item)=>{
+ item.addEventListener('click', (event)=>{
 		event.stopPropagation();
 		let target = event.target;
-	// условие при наличии класса у родителя
-		if(target.parentNode.classList.contains('how-info__active')){
+		console.log(target.className);
+				if(target.parentNode.classList.contains('how-info__active')){
 			target.parentNode.classList.remove('how-info__active');
-		}
-		//----------------------------
-		target.parentNode.classList.toggle('how-info__active');
-		how.forEach((howActive) => {
-			howActive.classList.remove('how-info__active');
-		});
-		console.log(target.parentNode)
-		toggoleClassTarget(target);
-		// return;
-	});
+		} else {
+			how.forEach((howActive) => {
+				howActive.classList.remove('how-info__active');
+			});
 
-
-});
+	target.parentNode.classList.add('how-info__active');
+		}	
+	})
+})
 
 
 let howBox = document.querySelectorAll('.how-card');

@@ -1,5 +1,7 @@
 .feedback
 	margin-bottom: 135px
+	.rating-cards
+		margin-bottom: 44px
 	h2
 		width: auto
 	&-page
@@ -96,7 +98,7 @@
 			line-height: 130%
 			color: #2196F3
 		&__photo
-			width: 80px
+			min-width: 80px
 			height: 80px
 			border-radius: 50%
 			background: #fff
@@ -112,6 +114,9 @@
 		&-slider
 			&-nav
 				z-index: 1
+
+.hidden_trigger
+	display: none
 
 @media screen and (max-width: 1199px)
 	.feedback
@@ -136,7 +141,18 @@
 
 @media screen and (max-width: 575px)
 	.feedback
+		.rating-cards
+			margin-bottom: 0px
+			margin-top: 0px
+		&-header
+			a
+				font-size: 10px
+				margin-left: auto
 		&-page
 			.feedback
 				&-card
 					margin-right: 0px
+	.example-header
+		a
+			font-size: 10px
+			margin-left: auto

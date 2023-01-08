@@ -720,7 +720,7 @@ section.callback, section.calc {
 .calc-bg {
   position: absolute;
   bottom: 0;
-  right: -68px;
+  right: -100px;
 }
 
 .aboutUs {
@@ -1994,6 +1994,7 @@ section.callback, section.calc {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 1;
 }
 .area .swiper-notification {
   display: none;

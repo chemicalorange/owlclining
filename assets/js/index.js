@@ -101,7 +101,15 @@ const price = ()=>{
 	let service1Value = document.querySelectorAll(".area__service-value");
 	
 	areaSelectInput.forEach((areaSelectInputItem)=>{
-		sum += +areaSelectInputItem.dataset.price * +totalArea.value;
+		if(totalArea.value >= 0 && totalArea.value <= 42){
+			sum += +areaSelectInputItem.dataset.price * +totalArea.value;
+		}
+		else if(totalArea.value > 42 && totalArea.value <= 120){
+			sum += (+areaSelectInputItem.dataset.price * +totalArea.value) - ((+areaSelectInputItem.dataset.price * +totalArea.value) * 0.1);
+		}
+		else if (totalArea.value > 120){
+			sum += (+areaSelectInputItem.dataset.price * +totalArea.value) - ((+areaSelectInputItem.dataset.price * +totalArea.value) * 0.15);
+		}
 	});
 
 	service1Value.forEach((serviceItem)=>{
