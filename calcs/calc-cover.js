@@ -9,75 +9,6 @@ let areaSelect = document.querySelectorAll(".area__select");
 let areaService = document.querySelector(".area__service");
 let areaServiceItem = areaService?.querySelectorAll(".area__service-item");
 let areaPrice = document.querySelector(".area__score-sum span");
-let areaSelectTypes = document.querySelector(".area__select__types");
-
-
-
-let typeService = areaSelectTypes.querySelector('.area__select-input');
-let typeOptions = areaSelectTypes.querySelector('.options');
-
-let matraces = [
-	{ param: '0x50', prices: 100 },
-	{ param: '1x50', prices: 200 },
-	{ param: '2x50', prices: 300 },
-];
-let shtors = [
-	{ param: '10x50', prices: 100 },
-	{ param: '12x50', prices: 200 },
-	{ param: '15x50', prices: 300 },
-];
-let covers = [
-	{ param: '20x50', prices: 100 },
-	{ param: '22x50', prices: 200 },
-	{ param: '32x50', prices: 300 },
-];
-
-const getArray = function () {
-	switch (a) {
-  case "cover":
-    break;
-  case "shtor":
-    break;
-  case "matrac":
-    break;
-}
-};
-
-const funcGenerateOpt = function (nameArray, elemInput, nameType) {
-
-	while (typeOptions.firstChild) {
-		typeOptions.removeChild(typeOptions.firstChild);
-	}
-
-	typeService.setAttribute('data-price', nameArray[0].price);
-	typeService.innerText = nameArray[0].param;
-
-	nameArray.forEach((item) => {
-		let typeOption = document.createElement('div');
-		typeOption.classList.add('options__item');
-		typeOption.setAttribute('data-price', item.prices);
-		typeOption.innerText = item.param;
-
-		typeOption.addEventListener("click", (event) => {
-			elemInput();
-			if (elemInput.getAttribute('data-type') == "cover") {
-				funcGenerateOpt(covers, elemInput);
-			}
-			if (elemInput.getAttribute('data-type') == "shtor") {
-				funcGenerateOpt(shtors, elemInput);
-			}
-			if (elemInput.getAttribute('data-type') == "matrac") {
-				funcGenerateOpt(matraces, elemInput);
-			}
-
-			typeOptions.classList.remove("active");
-			price();
-
-		});
-		typeOptions.append(typeOption);
-	})
-}
-
 
 const hideOptions = (event) => {
 	if (
@@ -93,53 +24,27 @@ const hideOptions = (event) => {
 };
 
 areaSelect.forEach((item) => {
-
 	let areaSelectInput = item.querySelector(".area__select-input");
+	let options = item.querySelector(".options");
+	let optionsItems = item.querySelectorAll(".options__item");
 
 	areaSelectInput.addEventListener("click", () => {
 		options.classList.toggle("active");
 		document.addEventListener("click", hideOptions);
 	});
 
-	let options = item.querySelector(".options");
-	let optionsItems = item.querySelectorAll(".options__item");
-
 	optionsItems.forEach((option) => {
 		option.addEventListener("click", (event) => {
-			const changeInput = function () {
-				areaSelectInput.innerText = event.target.innerText;
-
-				areaSelectInput.setAttribute(
-					"data-price",
-					option.getAttribute("data-price")
-				);
-
-				areaSelectInput.setAttribute(
-					"data-type",
-					option.getAttribute("data-type")
-				);
-			}();
-
-
-			if (areaSelectInput.getAttribute('data-type') == "cover") {
-				funcGenerateOpt(covers, changeInput);
-			}
-			if (areaSelectInput.getAttribute('data-type') == "shtor") {
-				funcGenerateOpt(shtors, changeInput);
-			}
-			if (areaSelectInput.getAttribute('data-type') == "matrac") {
-				funcGenerateOpt(matraces, changeInput);
-			}
-
+			areaSelectInput.innerText = event.target.innerText;
+			areaSelectInput.setAttribute(
+				"data-price",
+				option.getAttribute("data-price")
+			);
 			options.classList.remove("active");
 			price();
-
 		});
-
 	});
 });
-
-
 
 addOne.addEventListener("click", () => {
 	let result = Number(totalArea.value);
@@ -194,21 +99,34 @@ areaServiceItem?.forEach((item, index) => {
 	});
 });
 
+totalArea.addEventListener('keypress', (key)=>{
+	price()
+})
+
 let sum = 0;
 
 const price = () => {
 	let areaSelectInput = document.querySelectorAll(".area__select-input");
-	let service1Value = document.querySelectorAll(".area__service-value");
+	// let service1Value = document.querySelectorAll(".area__service-value");
+	let totalAreaAll = totalArea.value * totalLength.value
 
 	areaSelectInput.forEach((areaSelectInputItem) => {
-		sum +=
-			+areaSelectInputItem.dataset.price *
-			+(totalArea.value * totalLength.value);
+		if (totalAreaAll >= 0 && totalAreaAll <= 10) {
+			sum += +areaSelectInputItem.dataset.price * +totalAreaAll;
+		} else if (totalAreaAll > 10 && totalAreaAll <= 50) {
+			sum += (+areaSelectInputItem.dataset.price - 25) * totalAreaAll;
+		} else if (totalAreaAll > 50 && totalAreaAll <= 100) {
+			sum += (+areaSelectInputItem.dataset.price - 35) * totalAreaAll;
+		} else {
+			sum += (+areaSelectInputItem.dataset.price - 40) * totalAreaAll;
+		}
+
 	});
 
-	service1Value.forEach((serviceItem) => {
-		sum += +serviceItem.dataset.price * +serviceItem.innerText;
-	});
+	// service1Value.forEach((serviceItem) => {
+	//   sum += +serviceItem.dataset.price * +serviceItem.innerText;
+	// });
+
 	areaPrice.innerText = sum;
 	sum = 0;
 };

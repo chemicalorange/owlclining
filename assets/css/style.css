@@ -2611,6 +2611,10 @@ section.callback, section.calc {
   margin: -140px auto !important;
 }
 
+.areaHideBefore::before {
+  display: none !important;
+}
+
 @media screen and (max-width: 991px) {
   .area__score-sum {
     color: #000;

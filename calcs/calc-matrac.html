@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="area" style="margin-top: 100px">
+        <p class="area__title">Выберите услугу</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">Химчитска штор</div>
+          <div class="options">
+            <div class="options__item" data-price="220">Химчитска штор</div>
+            <div class="options__item" data-price="150">Химчитска штор</div>
+            <div class="options__item" data-price="1000">Химчитска штор</div>
+          </div>
+        </div>
+        <p class="area__title">Вид штор:</p>
+        <div class="area__select">
+          <input type="text" />
+          <div class="area__select-input" data-price="220">Тюль</div>
+          <div class="options">
+            <div class="options__item" data-price="220">Тюль</div>
+            <div class="options__item" data-price="150">Тюль</div>
+            <div class="options__item" data-price="1000">Тюль</div>
+          </div>
+        </div>
+        <p class="area__title">Размер</p>
+        <div class="area__inputs-params">
+          <div class="area__inputs">
+            <div class="area__square">
+              <span>Ширина</span>
+              <input type="number" name="total_area" id="total_area" />
+              <sup>м<sup>2</sup></sup>
+            </div>
+            <div class="area__square-btn">
+              <button id="del_one"></button>
+              <button id="add_one"></button>
+            </div>
+          </div>
+          <div class="area__inputs">
+            <div class="area__square">
+              <span>Длина</span>
+              <input
+                type="number"
+                name="total_area"
+                id="total_area"
+                class="total_length"
+              />
+              <sup>м<sup>2</sup></sup>
+            </div>
+            <div class="area__square-btn">
+              <button id="del_one" class="del_one_length"></button>
+              <button id="add_one" class="add_one_length"></button>
+            </div>
+          </div>
+        </div>
+        <div class="area__score">
+          <p>Итого</p>
+          <div class="area__score-sum"><span>2500</span> ₽</div>
+        </div>
+        <button class="btn btn-blue">Заказать уборку</button>
+      </div>
+      <hr />
+    </div>
+  </body>
+  <script src="../calcs/calc-cover.js"></script>
+</html>
