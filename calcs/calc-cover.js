@@ -99,8 +99,11 @@ areaServiceItem?.forEach((item, index) => {
 	});
 });
 
-totalArea.addEventListener('keypress', (key)=>{
-	price()
+let areaSquare = document.querySelectorAll('.area__square input');
+areaSquare.forEach((item) => {
+	item.addEventListener('input', ()=>{
+		price();
+	})
 })
 
 let sum = 0;

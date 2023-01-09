@@ -1,14 +1,53 @@
-let addOne = document.querySelector("#add_one");
-let delOne = document.querySelector("#del_one");
-let totalArea = document.querySelector("#total_area");
-let addOneLength = document.querySelector(".add_one_length");
-let delOneLength = document.querySelector(".del_one_length");
-let totalLength = document.querySelector(".total_length"); //+
 let areaRadioList = document.querySelector(".area__radio-list");
 let areaSelect = document.querySelectorAll(".area__select");
+let selectService = document.querySelector(".select_service");
+let selectServiceItem = selectService.querySelectorAll(".options__item");
 let areaService = document.querySelector(".area__service");
 let areaServiceItem = areaService?.querySelectorAll(".area__service-item");
 let areaPrice = document.querySelector(".area__score-sum span");
+let areaSlider = document.querySelector(".area__slider");
+let swiperSliderItem = areaSlider.querySelectorAll(".swiper-slide");
+
+var swiper = new Swiper(".area__slider", {
+  loop: true,
+  pagination: {
+    el: ".main-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".areaSwiper-button-next",
+    prevEl: ".areaSwiper-button-prev",
+  },
+});
+
+selectServiceItem.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    let dataPriceOption = item.getAttribute("data-price");
+    swiperSliderItem.forEach((item, index) => {
+      console.log("worj");
+      swiper.destroy();
+      if (item.getAttribute("data-category") === dataPriceOption) {
+        item.classList.remove("swiper-slide");
+        item.classList.add("hide");
+        item.setAttribute("style", "display: none");
+      } else {
+        item.removeAttribute("style");
+        item.classList.add("swiper-slide");
+      }
+    });
+    swiper = new Swiper(".area__slider", {
+      loop: true,
+      pagination: {
+        el: ".main-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".areaSwiper-button-next",
+        prevEl: ".areaSwiper-button-prev",
+      },
+    });
+  });
+});
 
 const hideOptions = (event) => {
   if (
@@ -35,49 +74,14 @@ areaSelect.forEach((item) => {
 
   optionsItems.forEach((option) => {
     option.addEventListener("click", (event) => {
+      let dataPriceOption = option.getAttribute("data-price");
       areaSelectInput.innerText = event.target.innerText;
-      areaSelectInput.setAttribute(
-        "data-price",
-        option.getAttribute("data-price")
-      );
+      areaSelectInput.setAttribute("data-price", dataPriceOption);
       options.classList.remove("active");
+
       price();
     });
   });
-});
-
-addOne.addEventListener("click", () => {
-  let result = Number(totalArea.value);
-  totalArea.value = result + 1;
-  price();
-});
-
-delOne.addEventListener("click", () => {
-  let result = Number(totalArea.value);
-  totalArea.value = result - 1;
-  if (result > 1) {
-    totalArea.value = result - 1;
-  } else {
-    totalArea.value = 0;
-  }
-  price();
-});
-
-addOneLength.addEventListener("click", () => {
-  let result = Number(totalLength.value);
-  totalLength.value = result + 1;
-  price();
-});
-
-delOneLength.addEventListener("click", () => {
-  let result = Number(totalLength.value);
-  totalLength.value = result - 1;
-  if (result > 1) {
-    totalLength.value = result - 1;
-  } else {
-    totalLength.value = 0;
-  }
-  price();
 });
 
 areaServiceItem?.forEach((item, index) => {
@@ -99,29 +103,18 @@ areaServiceItem?.forEach((item, index) => {
   });
 });
 
-let areaSquare = document.querySelectorAll('.area__square input');
-
-
-areaSquare.forEach((item) => {
-	item.addEventListener('input', ()=>{
-		price();
-	})
-})
-
 let sum = 0;
-
 const price = () => {
   let areaSelectInput = document.querySelectorAll(".area__select-input");
   let service1Value = document.querySelectorAll(".area__service-value");
 
   areaSelectInput.forEach((areaSelectInputItem) => {
-    sum += +areaSelectInputItem.dataset.price * +(totalArea.value * totalLength.value);
+    sum += +areaSelectInputItem.dataset.price;
   });
 
   service1Value.forEach((serviceItem) => {
     sum += +serviceItem.dataset.price * +serviceItem.innerText;
   });
-		
   areaPrice.innerText = sum;
   sum = 0;
 };

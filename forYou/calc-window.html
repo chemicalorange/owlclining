@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="../assets/css/style.min.css" />
+	<link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
+</head>
+
+<body>
+	<section class="calc">
+		<div class="container">
+			<div class="area area__calc-six">
+	
+				<div class="area__cards">
+					<div class="cardWind">
+						<div class="cardWind-img"><img src="../assets/img/calc/wind-1.svg" alt=""></div>
+						<p>Одностворчатое</p>
+						<div class="cardWind-num">
+							<div id="del_one" class="ar_left"></div>
+							<input type="number" data-number="250" min="0" max="99" value="0">
+							<div id="add_one" class="ar_right"></div>
+						</div>
+					</div>
+					<div class="cardWind">
+						<div class="cardWind-img"><img src="../assets/img/calc/wind-2.svg" alt=""></div>
+						<p>Двухстворчатое</p>
+						<div class="cardWind-num">
+							<div id="del_one" class="ar_left"></div>
+							<input type="number" data-number="400" min="0" max="99" value="0">
+							<div id="add_one" class="ar_right"></div>
+						</div>
+					</div>
+					<div class="cardWind">
+						<div class="cardWind-img"><img src="../assets/img/calc/wind-3.svg" alt=""></div>
+						<p>Трехстворчатое</p>
+						<div class="cardWind-num">
+							<div id="del_one" class="ar_left"></div>
+							<input type="number" data-number="500" min="0" max="99" value="0">
+							<div id="add_one" class="ar_right"></div>
+						</div>
+					</div>
+					<div class="cardWind">
+						<div class="cardWind-img"><img src="../assets/img/calc/wind-4.svg" alt=""></div>
+						<p> Балкон или лоджия</p>
+						<div class="cardWind-num">
+							<div id="del_one" class="ar_left"></div>
+							<input type="number" data-number="600" min="0" max="99" value="0">
+							<div id="add_one" class="ar_right"></div>
+						</div>
+					</div>
+				</div>
+	
+				<div class="area__small-box">
+					<p class="area__title">Выберите услугу</p>
+					<div class="area__checked">
+						<div class="checkbox">
+							<input class="custom-checkbox" type="checkbox" id="1" name="1" data-add="250">
+							<label for="1">Балконная створка</label>
+						</div>
+	
+						<div class="checkbox">
+							<input class="custom-checkbox" type="checkbox" id="2" name="2" data-add="100">
+							<label for="2">Витражное остекение высотой до 2,5 м</label>
+						</div>
+	
+						<div class="checkbox">
+							<input class="custom-checkbox" type="checkbox" id="3" name="3" data-add="230">
+							<label for="3">Мытье витражного остекления высотой от 2,5 до 6 м</label>
+						</div>
+	
+					</div>
+	
+					<div class="area__score">
+						<p>Итого</p>
+						<div class="area__score-sum"><span>0</span> ₽</div>
+					</div>
+					<button class="btn btn-blue">Заказать уборку</button>
+				</div>
+			</div>
+			<img src="../assets/img/svg/calc-bg-2.svg" alt="" class="calc-bg">
+		</div>
+	</section>
+</body>
+
+<script src="../assets/js/swiper-bundle.min.js"></script>
+<script src="calc-window.js"></script>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="../assets/css/style.min.css" />
+	<link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
+</head>
+
+<body>
+	<section class="calc">
+		<div class="container">
+			<div class="area">
+				<p class="area__title">Выберите услугу</p>
+				<div class="area__select select_service">
+					<input type="text" />
+					<div class="area__select-input" id="filt" data-category="1" data-price="0">
+						Выбрать....
+					</div>
+					<div class="options">
+						<div class="options__item" data-category="1" data-price="150">
+							Химчистка кожаной мебели
+						</div>
+						<div class="options__item" data-category="2" data-price="1000">
+							Химчистка мягкой мебели
+						</div>
+					</div>
+				</div>
+				<p class="area__title">Форма дивана:</p>
+				<div class="area__slider">
+					<div class="areaSwiper-button-prev"></div>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" data-category="150" data-price="150">
+							<img src="../assets/img/furniture/couch.svg" alt="" />
+							<p>Диван двухместный</p>
+						</div>
+						<div class="swiper-slide" data-category="150" data-price="150">
+							<img src="../assets/img/furniture/couch-2.svg" alt="" />
+							<p>Диван двухместный</p>
+						</div>
+						<div class="swiper-slide" data-category="150" data-price="150">
+							<img src="../assets/img/furniture/couch-3.svg" alt="" />
+							<p>Диван двухместный</p>
+						</div>
+						<div class="swiper-slide" data-category="150" data-price="150">
+							<img src="../assets/img/furniture/couch-4.svg" alt="" />
+							<p>Диван двухместный</p>
+						</div>
+						<div class="swiper-slide" data-category="150" data-price="150">
+							<img src="../assets/img/furniture/couch-5.svg" alt="" />
+							<p>Диван двухместный</p>
+						</div>
+
+
+						<div class="swiper-slide" data-category="1000" data-price="1000">
+							<img src="../assets/img/furniture/chair.svg" alt="" />
+							<p>Диван угловой</p>
+						</div>
+						<div class="swiper-slide" data-category="1000" data-price="1000">
+							<img src="../assets/img/furniture/chair-2.svg" alt="" />
+							<p>Кресло</p>
+						</div>
+						<div class="swiper-slide" data-category="1000" data-price="1000">
+							<img src="../assets/img/furniture/chair-3.svg" alt="" />
+							<p>Пуфик</p>
+						</div>
+						<div class="swiper-slide" data-category="1000" data-price="1000">
+							<img src="../assets/img/furniture/chair-4.svg" alt="" />
+							<p>Полукресло</p>
+						</div>
+						<div class="swiper-slide" data-category="1000" data-price="1000">
+							<img src="../assets/img/furniture/chair-5.svg" alt="" />
+							<p>Табурет</p>
+						</div>
+						<div class="swiper-slide" data-category="1000" data-price="1000">
+							<img src="../assets/img/furniture/chair-6.svg" alt="" />
+							<p>Кресло офисное</p>
+						</div>
+						<div class="swiper-slide" data-category="1000" data-price="1000">
+							<img src="../assets/img/furniture/chair-7.svg" alt="" />
+							<p>Стул со спинкой</p>
+						</div>
+					</div>
+
+					<div class="areaSwiper-button-next"></div>
+				</div>
+				<p class="area__title">Материал:</p>
+				<div class="area__select">
+					<input type="text" />
+					<div class="area__select-input" data-price="220">Текстиль 1</div>
+					<div class="options">
+						<div class="options__item" data-price="220">Текстиль 1</div>
+						<div class="options__item" data-price="100">Текстиль 2</div>
+						<div class="options__item" data-price="2000">Текстиль 3</div>
+					</div>
+				</div>
+				<div class="area__score">
+					<p>Итого</p>
+					<div class="area__score-sum"><span>0</span> ₽</div>
+				</div>
+				<button class="btn btn-blue">Заказать уборку</button>
+			</div>
+		</div>
+	</section>
+</body>
+
+<script src="../assets/js/swiper-bundle.min.js"></script>
+<script src="index-calc5.js"></script>
+<script></script>
+
+</html>

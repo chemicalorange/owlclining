@@ -94,6 +94,9 @@ areaServiceItem?.forEach((item, index) => {
   });
 });
 
+totalArea.addEventListener('input', (event)=>{
+	price();
+})
 
 let sum = 0;
 const price = ()=>{
