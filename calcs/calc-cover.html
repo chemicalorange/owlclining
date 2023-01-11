@@ -10,19 +10,22 @@
 
   <body>
     <div class="wrap">
-      <div class="area" style="margin-top: 100px">
+      <div class="area">
         <p class="area__title">Вид услуги</p>
         <div class="area__select">
           <input type="text" />
-          <div class="area__select-input areaHideBefore" data-price="150">Химчитска штор</div>
+          <div class="area__select-input areaHideBefore" data-price="150">Химчитска матраца</div>
         </div>
-        <p class="area__title">Тип ковров:</p>
+        <p class="area__title">Размер матраца:</p>
         <div class="area__select">
           <input type="text" />
-          <div class="area__select-input" data-price="0">Ворсовый</div>
+          <div class="area__select-input" data-price="0">Выбрать</div>
           <div class="options">
-            <div class="options__item" data-price="0">Безворсовый</div>
-            <div class="options__item" data-price="0">Ворсовый</div>
+            <div class="options__item" data-price="0">80*200</div>
+            <div class="options__item" data-price="0">90*190</div>
+            <div class="options__item" data-price="0">90*200</div>
+            <div class="options__item" data-price="0">120*190</div>
+            <div class="options__item" data-price="0">120*200</div>
           </div>
         </div>
         <p class="area__title">Размер</p>
@@ -31,7 +34,7 @@
             <div class="area__square">
               <span>Ширина</span>
               <input type="number" name="total_area" id="total_area" />
-              <sup>м<sup>2</sup></sup>
+              <sup>cм</sup>
             </div>
             <div class="area__square-btn">
               <button id="del_one"></button>
@@ -47,7 +50,7 @@
                 id="total_area"
                 class="total_length"
               />
-              <sup>м<sup>2</sup></sup>
+              <sup>cм</sup>
             </div>
             <div class="area__square-btn">
               <button id="del_one" class="del_one_length"></button>

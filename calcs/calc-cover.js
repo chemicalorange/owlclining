@@ -36,6 +36,11 @@ areaSelect.forEach((item) => {
 	optionsItems.forEach((option) => {
 		option.addEventListener("click", (event) => {
 			areaSelectInput.innerText = event.target.innerText;
+			const values = event.target.innerText.split('*');
+			totalArea.value = values[0]
+			totalLength.value = values[1]
+
+			console.log(event.target.innerText)
 			areaSelectInput.setAttribute(
 				"data-price",
 				option.getAttribute("data-price")
@@ -130,6 +135,6 @@ const price = () => {
 	//   sum += +serviceItem.dataset.price * +serviceItem.innerText;
 	// });
 
-	areaPrice.innerText = sum;
+	areaPrice.innerText = (sum / 100).toFixed(0);
 	sum = 0;
 };
