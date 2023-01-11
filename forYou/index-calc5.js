@@ -20,6 +20,19 @@ var swiper = new Swiper(".area__slider", {
   },
 });
 
+//new code
+let activeSlidePrice = document.querySelector('.swiper-slide-active').dataset.price
+
+const slideChangeHandler = () => {
+  swiper.on('slideChange', function () {
+    activeSlidePrice = document.querySelector('.swiper-slide-active').dataset.price
+    price()
+  })
+}
+
+slideChangeHandler()
+//--
+
 selectServiceItem.forEach((item, index) => {
   item.addEventListener("click", () => {
     let dataPriceOption = item.getAttribute("data-price");
@@ -46,6 +59,9 @@ selectServiceItem.forEach((item, index) => {
         prevEl: ".areaSwiper-button-prev",
       },
     });
+    //new code
+    slideChangeHandler()
+    //--
   });
 });
 
@@ -78,7 +94,6 @@ areaSelect.forEach((item) => {
       areaSelectInput.innerText = event.target.innerText;
       areaSelectInput.setAttribute("data-price", dataPriceOption);
       options.classList.remove("active");
-
       price();
     });
   });
@@ -115,6 +130,9 @@ const price = () => {
   service1Value.forEach((serviceItem) => {
     sum += +serviceItem.dataset.price * +serviceItem.innerText;
   });
+  //new code
+  sum += +activeSlidePrice
+  //end --
   areaPrice.innerText = sum;
   sum = 0;
 };

@@ -59,7 +59,9 @@ areaCheckedCheckbox.forEach(checkbox => {
 			areaPrice.innerHTML = +additionalPrice + +areaPrice.innerHTML
 		}
 		else {
-		    areaPrice.innerHTML = +additionalPrice + +''
+			//updated
+		    areaPrice.innerHTML = +areaPrice.innerHTML - +additionalPrice 
+			//end --
 		}
 	})
 			sum = +areaPrice.innerHtml
